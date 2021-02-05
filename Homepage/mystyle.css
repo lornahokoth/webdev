@@ -20,6 +20,7 @@ header div div{
 body {
   background-color: #e0b3ff;
   font-family: sans-serif;
+  color: rgb(75, 75, 75);
 }
 a {
   font-weight: normal;
@@ -61,7 +62,7 @@ a {
 }
 .row {
   padding: 10px;
-  border-top: 2px solid black;
+  border-top: 2px solid rgb(75, 75, 75);;
   display: flex;
 }
 .col {
@@ -122,7 +123,6 @@ list-style: lower-roman;
   font-style: oblique;
   font-weight: bolder;
   font-size:5em;
-  color: rgb(75, 75, 75);
 }
 #quote {
   font-weight: bold;
