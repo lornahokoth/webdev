@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Working With CSS</title>
+	<style>
+		.acolor{
+			color: greenyellow;
+		}
+		#indent{
+			white-space: pre;
+			background-color: rgb(51 51 51);
+			color: rgb(204 0 102);
+			font-family: consolas;
+		}
+		#indent span{
+			color: white;
+		}
+		#embedded{
+			text-indent: 2cm;
+			color: darkred;
+			margin-left: 6cm;
+		}
+		.tag {
+			font-weight: bold;
+			text-decoration: underline;
+			color: rgb(141, 83, 199);
+		}
+		.standards {
+			background-color: rgb(51, 51, 51);
+			color: white;
+		}
+	</style>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h2>Exercise 1</h2>
+		<p style="text-indent: 2cm; color: darkred;">
+		This paragrapgh has been formatted using the in-line style command.
+		</p>
+
+		<p> This paragraph has not been formatted using the in-line style command. </P>
+
+	<h2>Exercise 2</h2>
+		<p>
+			<div id="indent">
+			body<span>{
+				font-family: "times new roman";
+				margin-left: 20%;
+				margin-right: 20%;
+				text-align: justify;
+				background: ivory;
+				color: red;
+			}
+			</span>
+			p<span>{
+				text-indent: 2cm;
+			}
+			</span>
+			h1, h2, h3<span>{
+				color: red;
+				margin-left: 2cm;
+			}
+			</span>
+			</div>
+		</p>
+	<h2>Exercise 3</h2>
+		<p>
+		<div>
+			<h1 style="color: red; margin-left: 2cm">h1 heading</h1>
+			<h2 style="color: red; margin-left: 4cm">h2 subheading</h2>
+		</div>
+		<div id="embedded">
+			<p>Paragraph 1</p>
+			<p>Paragraph 2</p>
+		</div>
+		<div id="link">
+			<h2>h2 Subheading</h2>
+			<p>Paragraph 1</p>
+		</div>
+		</p>
+	<h2>Exercise 4</h2>
+		<a href="popsong.html">Pop Song</a>
+	<h2>Exercise 5</h2>
+		<a href="popstyle.html">Pop Song w/ External CSS</a>
+	<h2>Exercise 6</h2>
+		<div class="standards">
+			<span class="tag">div -</span>
+			<span class="description">div tags should use display: flex.  This allows for easily
+				aligning divs next to each other and creating seperate rows.  Background color
+				will be rgb(51, 51, 51).  The default text color is white.</span><br>
+			<span class="tag">h1 -</span>
+			<span class="description">we will use the default format for h1 tags.</span><br>
+			<span class="tag">h2 -</span>
+			<span class="description">h2 tags will use the default format using red text.</span><br>
+			<span class="tag">table -</span>
+			<span class="description">Tables should be alternating colors and have a width no greater
+				than 70% of	the container.
+			</span><br>
+			<span class="tag">tr -</span>
+			<span class="description">The header background-color will be a dark blue. The rows will
+				alternate between white and a lighter shade of the header color.
+				</span><br>
+			<span class="tag">th -</span>
+			<span class="description">th should set the font-weight to bold</span><br>
+			<span class="tag">td -</span>
+			<span class="description">numeric fields should have text-align center.  Alpha fields will
+				have text-align set to left.
+			</span><br>
+			<span class="tag">span -</span>
+			<span class="description">use spans to emphasize important messages.  The color of the
+				messages should be red.  The font-weight should be bold.
+			</thead></span><br>
+			<span class="tag">a -</span>
+			<span class="description">a tags should show a description intead of just be the url.
+				<a class="acolor" href="https://www.google.com">https://www.google.com</a> vs
+				<a class="acolor" href="https://www.google.com">Google</a>
+			</span><br>
+			<span class="tag">p -</span>
+			<span class="description">p tags should be indented using text-indent: 2cm</span>
+		</div>
+
+</body>
+</html>

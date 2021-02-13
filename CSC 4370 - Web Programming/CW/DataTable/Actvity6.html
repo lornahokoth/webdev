@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <title>HTML Table Design</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        text-align: center;
+      }
+      .math {
+        background-color: blue;
+        color: white;
+      }
+      .csc {
+        background-color: gold;
+        color: black;
+      }
+      .pol {
+        background-color: red;
+        color: white;
+      }
+      .geol {
+        background-color: green;
+        color: white;
+      }
+      .study {
+        background-color: violet;
+        color: white;
+      }
+      .dog {
+        background-color: tan;
+        color: black;
+      }
+    </style>
+  </head>
+  <a href="main.html"> HOME</a>
+  <body>
+    <table cellpadding="3" align="center">
+      <caption>
+        Lornah's Timetable
+      </caption>
+      <tr>
+        <td></td>
+        <td></td>
+        <td colspan="3">Morning</td>
+        <td>Lunch</td>
+        <td colspan="4">Afternoon</td>
+        <td colspan="4">Evening</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>9-10 am</td>
+        <td>10-11 am</td>
+        <td>11-12 pm</td>
+        <td>12-1 pm</td>
+        <td>1-2 pm</td>
+        <td>2-3 pm</td>
+        <td>3-4 pm</td>
+        <td>4-5 pm</td>
+        <td>5-6 pm</td>
+        <td>6-7 pm</td>
+        <td>7-8 pm</td>
+        <td>8-9 pm</td>
+      </tr>
+      <tr>
+        <td rowspan="5">School Work</td>
+        <td rowspan="2">Asynchronous</td>
+        <td class="pol" colspan="12">POL 2401</td>
+      </tr>
+      <tr>
+        <td class="geol" colspan="12">GEOL 1122</td>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="math" rowspan="2" colspan="2">Math 3020</td>
+        <td class="csc" colspan="3" rowspan="2">CSC 4370</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td></td>
+        <td></td>
+        <td class="geol" colspan="2">GEOL 1122 Lab</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="2">Study</td>
+        <td>Tuesday</td>
+        <td class="study" rowspan="2" colspan="2">Study/Homework</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Chores</td>
+        <td>Everyday</td>
+        <td class="dog">Walk Dog</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="dog">Walk Dog</td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>

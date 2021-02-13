@@ -1,0 +1,34 @@
+.bold {
+    font-weight: bold;
+}
+.artist{
+    font-family: Arial;
+    color: moccasin;
+}
+.album{
+    font-family: Arial;
+    font-weight: normal;
+    color: khaki;
+}
+.verse{
+    font-family: Trebuchet MS;
+    color: gold;
+    margin-left: 2cm;
+    margin-right: 2cm;
+}
+.chorus{
+    font-family: Trebuchet MS;
+    font-style: italic;
+    color: gold;
+    margin-left: 4cm;
+    margin-right: 4cm;
+}
+#year{
+    font-size: 12pt;
+    font-family: Arial;
+    color: ivory;
+}
+body{
+    background-color: chocolate;
+    font-size: 14pt;
+}
