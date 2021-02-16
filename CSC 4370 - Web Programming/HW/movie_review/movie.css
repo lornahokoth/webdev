@@ -3,36 +3,50 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: Verdana, Tahoma, sans-serif;
-   
+    font-size: 8pt;   
 }
 .layout {
     border: 4px solid grey;
     width: 800px;
     margin: auto;
+    position: relative;
 }
-header {
+.header {
     background-image: url("bannerbackground.png");
     margin-bottom: 20px;
     height: 50px;
-}
-img{
-height: 50px;
 }
 #heading {
     font-size: 24pt;
     font-weight: bold;
     font-family: Verdana, Tahoma, sans-serif;
     text-align: center;
+    padding: 0 0 15px 0;
 }
 .leftCol {
     width: 550px;
+}
+.rightCol{
+    width:250px;
+    background-color: #a2b964;
+    font-size: 8pt;
+    font-family: Arial;
 }
 .headerCol {
     background-image: url("rottenbackground.png");
     height: 83px;
    
 }
-div img {
+.container {
+    position: relative;
+}
+.floatLeft {
+    float: left;
+}
+.header img {
+    height: 50px;
+}
+img {
     height: 83px;
     float: left;
 }
@@ -40,8 +54,93 @@ div img {
     font-size: 48pt;
     color: red;
     font-weight: bold;
-   
+    margin: 0px;
+    position: absolute;
+    top: 6px;
 }
 #review {
     color: white;
+    position: absolute;
+    left: 275px;
+    top: 60px;
+}
+.reviews{
+    margin-top: 1.5%;
+}
+.left {
+    margin-left: 2%;
+}
+.right {
+    margin-right: 2%;
+}
+.row {
+    display: flex;
+    width: 550px;
+    column-gap: 2%;
+    margin-bottom: 3rem;
+}
+.columns {
+    flex: 1;
+    flex-basis: 47%;
+}
+.box{
+    background-color: #E1D697;
+    border: 2px solid grey;
+}
+.quote {
+    font-size: 8pt;
+    font-weight: bold;
+    padding: 8px;
+    min-height: 25px;
+}
+.quote img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+.critic{
+    margin-top: 10px;
+}
+.critic img {
+    width: 35px;
+    height: 33px;
+}
+p.italic {
+    font-style: italic;
+}
+p {
+    margin: 0;
+}
+.rightCol img {
+    height: 412px;
+}
+.pad {
+    padding-left: 10px;
+}
+dl {
+    padding-top: 410px;
+}
+dt {
+    font-weight: bold;
+    padding-top: 1em;
+}
+.floatRight{
+    position: absolute;
+    left: 550px;
+    top: 0px;
+    height: 100%;
+}
+.pages {
+    background-color: #a2b964;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+}
+.w3c {
+    float: right;
+}
+.w3cimg {
+    border:0;
+    width:88px;
+    height:31px
 }
