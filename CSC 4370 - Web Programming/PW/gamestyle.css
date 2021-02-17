@@ -1,0 +1,152 @@
+body {
+  background-color: white;
+}
+.game {
+  width: 800px;
+  height: 450px;
+  background-color: rgb(0 128 128);
+  margin: 3% auto auto auto;
+  position: relative;
+}
+@keyframes slideToRight {
+  from {
+    left: -10%;
+  }
+  to {
+    left: 25%;
+  }
+}
+@keyframes slideToLeft {
+  from {
+    right: -10%;
+  }
+  to {
+    right: 25%;
+  }
+}
+@keyframes moveInButton {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.title {
+  font-family: "Big Shoulders Stencil Text", cursive;
+  font-size: 72pt;
+  color: white;
+}
+.jail {
+  position: absolute;
+  animation-name: slideToRight;
+  animation-duration: 4s;
+  left: 25%;
+}
+.break {
+  position: absolute;
+  right: 25%;
+  animation-name: slideToLeft;
+  animation-duration: 4s;
+}
+.button {
+  background-color: rgb(64 0 0);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 60px/50px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  font-size: 28pt;
+  cursor: pointer;
+}
+.button:hover {
+  background: rgb(128 0 0);
+  transform: translateY(-3px);
+}
+.button:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.button:active {
+  transform: translate(-1px);
+}
+.buttonanimated {
+  animation: moveInButton 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: red;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+@media screen and (max-width: 700px) {
+  .box {
+    width: 70%;
+  }
+  .popup {
+    width: 70%;
+  }
+}
+.play {
+  position: absolute;
+  bottom: 25%;
+  left: 26%;
+}
+.rules {
+  position: absolute;
+  bottom: 25%;
+  right: 26%;
+}
+.home {
+  background-image: url("jail.jpg");
+  background-size: contain;
+}
+.rope1 {
+  background-image: url("rope1.jpg");
+  background-size: contain;
+}
