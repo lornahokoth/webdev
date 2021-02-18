@@ -34,6 +34,20 @@ body {
     transform: translate(0);
   }
 }
+@keyframes textBoxExpand {
+  from {
+    width: 0; 
+    height: 0;
+    bottom: 5%;
+    left: 50%;
+    color: rgba(255, 255, 255, 0);
+    
+  }
+  to {
+    width: 80%;
+    color: rgba(255, 255, 255, 0);
+  }
+}
 .title {
   font-family: "Big Shoulders Stencil Text", cursive;
   font-size: 72pt;
@@ -63,19 +77,37 @@ body {
   font-size: 28pt;
   cursor: pointer;
 }
+.button2 {
+  background-color: rgb(64 0 0);
+  border: none;
+  color: white;
+  padding: 2px 0px;
+  width: 200px;
+  border-radius: 60px/50px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  font-size: 14pt;
+  cursor: pointer;
+}
 .button:hover {
   background: rgb(128 0 0);
-  transform: translateY(-3px);
+  /* transform: translateY(-3px); */
+  transform: scaleX(1.1) scaleY(1.1);
 }
 .button:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
+  transform: scaleX(.5) scaleY(.5);
   opacity: 0;
 }
 .button:active {
-  transform: translate(-1px);
+  transform: scaleX(.9) scaleY(.9);
 }
 .buttonanimated {
   animation: moveInButton 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+.buttonanimated2 {
+  animation: moveInButton 0.5s ease-out 1.25s;
   animation-fill-mode: backwards;
 }
 .overlay {
@@ -107,6 +139,7 @@ body {
   color: #333;
   font-family: Tahoma, Arial, sans-serif;
 }
+
 .popup .close {
   position: absolute;
   top: 5px;
@@ -124,18 +157,38 @@ body {
   max-height: 30%;
   overflow: auto;
 }
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
   .box {
     width: 70%;
   }
   .popup {
     width: 70%;
   }
-}
+} */
 .play {
   position: absolute;
   bottom: 25%;
   left: 26%;
+}
+.topleft {
+  position: absolute;
+  bottom: 42%;
+  left: 15%;
+}
+.bottomleft {
+  position: absolute;
+  bottom: 13%;
+  left: 15%;
+}
+.topright {
+  position: absolute;
+  bottom: 42%;
+  right: 15%;
+}
+.bottomright {
+  position: absolute;
+  bottom: 13%;
+  right: 15%;
 }
 .rules {
   position: absolute;
@@ -148,5 +201,42 @@ body {
 }
 .rope1 {
   background-image: url("rope1.jpg");
-  background-size: contain;
+  background-size: cover;
+}
+.hallway1 {
+  background-image: url("hallway1.jpg");
+  background-size: cover;
+}
+.textbox {
+  width: 80%;
+  min-height: 7rem;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  background-color: rgba(255, 255, 255, 0.466);
+  text-align: center;
+  animation-name: textBoxExpand;
+  animation-duration: 1s;
+  
+}
+.info {
+  margin-top: 11px;
+}
+.menu {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  transition: all 200ms;
+  font-size: 23px;
+  font-weight: bolder;
+  color: #333;
+  background-color: white;
+  border-radius: 90%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+}
+.back {
+  text-decoration: none;
 }
