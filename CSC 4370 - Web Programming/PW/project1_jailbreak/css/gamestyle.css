@@ -1,0 +1,592 @@
+@font-face {
+  font-family: gameFont;
+  src: url(../font/Big_Shoulders_Stencil_Text/BigShouldersStencilText-Black.ttf);
+}
+#valid {
+position: absolute;
+left: 85%;
+}
+/* background color */
+body {
+  background-color: white;
+}
+/* The size of the game. Where the game is played */
+.game {
+  width: 800px;
+  height: 450px;
+  background-color: rgb(0 128 128);
+  margin: 3% auto auto auto;
+  position: relative;
+}
+/* Aniamtion to slide Jail to the right */
+@keyframes slideToRight {
+  from {
+    left: -10%;
+  }
+  to {
+    left: 25%;
+  }
+}
+/*Animation to slide Break to the left  */
+@keyframes slideToLeft {
+  from {
+    right: -10%;
+  }
+  to {
+    right: 25%;
+  }
+}
+/* Animate moveInButton changes the opacity from 0% to 100% and slides the buttons up */
+@keyframes moveInButton {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+/* Animate the textbox at every page opening */
+@keyframes textBoxExpand {
+  from {
+    width: 0;
+    height: 0;
+    bottom: 5%;
+    left: 50%;
+    color: rgba(255, 255, 255, 0);
+  }
+  to {
+    width: 80%;
+    color: rgba(255, 255, 255, 0);
+  }
+}
+/* shake animation for unstable room */
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(-1deg);
+  }
+  5% {
+    transform: translate(0px, 1.5px);
+  }
+  10% {
+    transform: translate(-1px, -2px);
+  }
+  15% {
+    transform: translate(-2px, -1px);
+  }
+  20% {
+    transform: translate(-3px, 0px);
+  }
+  25% {
+    transform: translate(0px, 1px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px);
+  }
+  35% {
+    transform: translate(2px, 1.5px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  45% {
+    transform: translate(0px, 0.5px);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  55% {
+    transform: translate(-2px, 0.5px);
+  }
+  60% {
+    transform: translate(-3px, 1px);
+  }
+  65% {
+    transform: translate(0px, 1px);
+  }
+  70% {
+    transform: translate(3px, 1px);
+  }
+  75% {
+    transform: translate(1px, 0px) rotate(1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px);
+  }
+  85% {
+    transform: translate(0px, 0.5px);
+  }
+  90% {
+    transform: translate(1px, 2px);
+  }
+  95% {
+    transform: translate(1px, 0px);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+/* animation making rocks fall */
+@keyframes fall {
+  from {
+    top: -50%;
+    transition: opacity 3s ease;
+    opacity: 1;
+  }
+  to {
+    top: 85%;
+    transition: opacity 7s ease;
+    opacity: 0;
+  }
+}
+/* animation making rocks fall all the way through */
+@keyframes fallend {
+  from {
+    top: -50%;
+    transition: opacity 5s ease;
+    opacity: 0;
+  }
+  to {
+    top: 85%;
+    transition: opacity 5s ease;
+    opacity: 1;
+  }
+}
+/* animation and transforms for dangling rope*/
+@keyframes swing {
+  0% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+@-webkit-keyframes swing {
+  0% {
+    webkit-transform: rotate(15deg);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(15deg);
+  }
+}
+/* .title, .jail, .break, go to title.html.  */
+.title {
+  font-family: gameFont;
+  font-size: 72pt;
+  color: white;
+}
+.jail {
+  position: absolute;
+  animation-name: slideToRight;
+  animation-duration: 4s;
+  left: 25%;
+}
+.break {
+  position: absolute;
+  right: 25%;
+  animation-name: slideToLeft;
+  animation-duration: 4s;
+}
+/* Standards for title buttons */
+.button {
+  background-color: rgb(64 0 0);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 60px/50px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  font-size: 28pt;
+  cursor: pointer;
+}
+/* Standards for the gameplay buttons */
+.button2 {
+  background-color: rgb(64 0 0);
+  border: none;
+  color: white;
+  padding: 2px 3px;
+  min-width: 200px;
+  border-radius: 60px/50px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  font-size: 14pt;
+  cursor: pointer;
+}
+/* Button animations for title and gameplay */
+.button:hover {
+  background: rgb(128 0 0);
+  /* transform: translateY(-3px); */
+  transform: scaleX(1.1) scaleY(1.1);
+}
+.button:active {
+  transform: scaleX(0.9) scaleY(0.9);
+}
+/* buttonanimation slides them up and changes the values */
+.buttonanimated {
+  animation: moveInButton 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+.buttonanimated2 {
+  animation: moveInButton 0.5s ease-out 1.25s;
+  animation-fill-mode: backwards;
+}
+/* darken overlay on popup */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+/* popup for rules button */
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: red;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+#link {
+  color: rgb(0 174 174);
+}
+#link:hover {
+  color: rgb(128 0 0);
+}
+/* css code for the play button */
+.play {
+  position: absolute;
+  bottom: 25%;
+  left: 26%;
+}
+/* Topleft, bottomleft, topright, bottomright are placements of the buttons */
+.topleft {
+  position: absolute;
+  bottom: 42%;
+  left: 15%;
+}
+.bottomleft {
+  position: absolute;
+  bottom: 13%;
+  left: 15%;
+}
+.topright {
+  position: absolute;
+  bottom: 42%;
+  right: 15%;
+}
+.bottomright {
+  position: absolute;
+  bottom: 13%;
+  right: 15%;
+}
+/* css code for the rule button */
+.rules {
+  position: absolute;
+  bottom: 25%;
+  right: 26%;
+}
+.textbox {
+  width: 80%;
+  min-height: 7rem;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  background-color: rgba(255, 255, 255, 0.466);
+  text-align: center;
+  animation-name: textBoxExpand;
+  animation-duration: 1s;
+}
+.info {
+  margin-top: 11px;
+}
+.menu {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  transition: all 200ms;
+  font-size: 23px;
+  font-weight: bolder;
+  color: #333;
+  background-color: white;
+  border-radius: 90%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+}
+.back {
+  text-decoration: none;
+}
+.home {
+  background-image: url("../images/jail.jpg");
+  background-size: contain;
+}
+.start {
+  background-image: url("../images/opencell.jpg");
+  background-size: cover;
+}
+.rope1 {
+  background-image: url("../images/rope.jpg");
+  background-size: cover;
+  display: flex;
+}
+.rope1:hover {
+  animation: climb 1.5s;
+  animation-iteration-count: 1;
+}
+@keyframes climb {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform-origin: top;
+    transform: scale(3, 3);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.hallway1 {
+  background-image: url("../images/hallway.jpg");
+  background-size: cover;
+}
+/* properties for unstable room */
+.fallthrough {
+  background-image: url("../images/unstable.jpg");
+  background-size: cover;
+  animation-name: shake;
+  animation-duration: infinite;
+}
+/* duration for shake animation when hovering */
+.fallthrough:hover {
+  animation: shake 10s;
+  animation-iteration-count: infinite;
+}
+/* properties for closed cell */
+.closedcell {
+  background-image: url("../images/closecell.jpg");
+  background-size: cover;
+}
+/* properties for dangling rope in hall */
+.rope {
+  height: 200px;
+  width: 75px;
+  display: block;
+  margin: auto;
+  position: relative;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-animation: swing ease-in-out forwards;
+  animation: swing ease-in-out forwards;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+/* properties for falling rubble */
+.rubble {
+  height: 120px;
+  width: 450px;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 100%;
+  animation-name: fall;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.rubbleend {
+  height: 120px;
+  width: 450px;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 85%;
+  animation-name: fallend;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+/*this will control moving rat*/
+.rat {
+  position: absolute;
+  animation-name: mover;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition-delay: 2s;
+}
+/*moves the rat to the right*/
+@keyframes mover {
+  from {
+    right: 50%;
+    opacity: 0;
+  }
+  to {
+    right: 0%;
+    opacity: 1;
+  }
+}
+/*properties for right */
+.darkjail {
+  background-image: url("../images/darkfloor.jpeg");
+  background-size: cover;
+}
+/*properties for followrats */
+.sewer {
+  background-image: url("../images/sewer.jpeg");
+  background-size: cover;
+}
+/* properties for onexit*/
+.drain {
+  background-image: url("../images/drain.jpeg");
+  background-size: cover;
+}
+/*used for textbox with only one option */
+.center {
+  position: absolute;
+  left: 35%;
+  bottom: 30%;
+}
+/*image does full rotation and expand on hover*/
+#rotate_image {
+  position: absolute;
+  height: 150px;
+  width: 175px;
+  left: 70px;
+  top: 100px;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  -ms-transition: -ms-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+}
+#rotate_image:hover {
+  transform: rotate(360deg) scale(2);
+  -ms-transform: rotate(360deg) scale(2);
+  -webkit-transform: rotate(360deg) scale(2);
+}
+/*image fade by steadily decrease opacity*/
+@keyframes fade {
+  0% {
+    opacity: 1;
+    transform: rotateX(90deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotateX(0deg);
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+}
+/*security guard that will fade*/
+.guard {
+  height: 375px;
+  width: 125px;
+  display: block;
+  margin: auto;
+  animation-name: fade;
+  animation-duration: 1800ms;
+  animation-fill-mode: forwards;
+}
+/*.security camera that will fade*/
+.scam {
+  height: 135px;
+  width: 135px;
+  display: block;
+  margin: auto;
+  animation-name: fade;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+}
+/*bg for securitydoor*/
+.security {
+  background-image: url("../images/gdoor.jpg");
+  background-size: cover;
+}
+/*bg for threedoors*/
+.threedoors {
+  background-image: url("../images/threedoors.jpg");
+  background-size: cover;
+}
+/*room1 bg of breakroom*/
+.rm1 {
+  background-image: url("../images/ppl.png");
+  background-size: cover;
+}
+/*room2 bg of surveillance room*/
+.rm2 {
+  background-image: url("../images/camera.jpg");
+  background-size: cover;
+}
+/*riot bg of released prisoners*/
+.riot {
+  background-image: url("../images/riot.jpg");
+  background-size: cover;
+}
+/*exit 2 bg of empty field*/
+.ex2 {
+  background-image: url("../images/field.jpg");
+  background-size: cover;
+}
+/*raindrop propeties*/
+.raindrop {
+  animation-name: raining;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-duration: 20s;
+  position: relative;
+  display: block;
+  margin: auto;
+}
+/*makes it rain*/
+@keyframes raining {
+  from {
+    bottom: 50%;
+    opacity: 0;
+  }
+  to {
+    bottom: -22%;
+    opacity: 1;
+  }
+}

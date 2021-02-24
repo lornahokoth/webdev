@@ -1,0 +1,64 @@
+@font-face {
+  font-family: gameFont;
+  src: url(../font/Big_Shoulders_Stencil_Text/BigShouldersStencilText-Black.ttf);
+}
+@font-face {
+  font-family: summaryFont;
+  src: url(../font/Special_Elite/SpecialElite-Regular.ttf);
+}
+body {
+  font-family: summaryFont;
+  background-color: grey;
+}
+#title {
+  font-family: gameFont;
+  font-size: 72pt;
+  text-align: center;
+}
+#bg {
+  padding: 25px 50px 50px 50px;
+}
+#desc {
+  text-align: center;
+  font-size: 14pt;
+}
+.textbox {
+  background-color: rgba(255, 255, 255, 0.397);
+  padding: 1% 10%;
+}
+.col {
+  flex: 1;
+  padding: 1rem;
+}
+.row {
+  display: flex;
+  margin: auto;
+}
+.name {
+  font-weight: bold;
+  font-size: 14pt;
+}
+.header {
+  font-weight: bold;
+  text-align: center;
+  font-size: 22pt;
+}
+li {
+  padding: 5px;
+}
+#link:link,
+#link:visited {
+  padding: 10px 20px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(128 0 0);
+}
+#link:hover {
+  color: white;
+  background-color: rgb(0 128 128);
+}
+#valid {
+position: absolute;
+left: 85%;
+}
