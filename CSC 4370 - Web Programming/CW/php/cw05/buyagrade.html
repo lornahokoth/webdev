@@ -24,29 +24,35 @@
     <hr />
 
     <h2>Give Us Your Money</h2>
-    <form action="">
+    <form action="sucker.php" method="POST">
       <dl>
         <dt>Name</dt>
         <dd>
-          <input type="text" />
+          <input type="text" name="name" />
         </dd>
 
         <dt>Section</dt>
         <dd>
-          <select name="" id="">
+          <select name="section" id="class">
             <option value="MA">MA</option>
+            <option value="MB">MB</option>
+            <option value="MC">MC</option>
+            <option value="MD">MD</option>
+            <option value="ME">ME</option>
+            <option value="MF">MF</option>
+            <option value="MG">MG</option>
             <option value="MH">MH</option>
           </select>
         </dd>
 
         <dt>Credit Card</dt>
         <dd>
-          <input type="text" />
-		  <br>
-		  <input type="radio" name="card" id="visa" value="Visa">
-		  <label for="Visa"> Visa </label>
-		  <input type="radio" name="card" id="mc" value="MasterCard">
-		  <label for="MasterCard"> MasterCard</label>
+          <input type="text" name="cardNum" maxlength="16" />
+          <br />
+          <input type="radio" name="card" id="visa" value="(visa)" />
+          <label for="Visa"> Visa </label>
+          <input type="radio" name="card" id="mc" value="(mastercard)" />
+          <label for="MasterCard"> MasterCard</label>
         </dd>
       </dl>
 
