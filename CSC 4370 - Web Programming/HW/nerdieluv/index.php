@@ -10,23 +10,20 @@
 </head>
 
 <body>
-<header id="bannerarea">
-    <img src="./images/nerd-love.png" alt="nerd love logo" />
-    <br>
-    <label>Where meek geeks meet!</label>
-</header>
-<div>
-    <h1>Welcome!</h1>
+    <header id="bannerarea">
+        <a href="./index.php"><img src="./images/nerd-love.png" alt="nerd love logo" /></a>
+        <br>
+        <label>Where meek geeks meet!</label>
+    </header>
     <div>
-        <a href="./signup.php"><img src="./images/heart.png" alt="heart" /> Sign up for a new account</a>
+        <h1>Welcome!</h1>
+        <div>
+            <a href="./signup.php"><img src="./images/heart.png" alt="heart" /> Sign up for a new account</a>
+        </div>
+        <div>
+            <a href="./matches.php"><img src="./images/sign-up.png" alt="sign-up" /> Check your matches</a>
+        </div>
     </div>
-    <div>
-        <a href="./matches.php"><img src="./images/sign-up.png" alt="sign-up" /> Check your matches</a>
-    </div>
-</div>
-<?php
- 
-?>
 </body>
 
 </html>
