@@ -1,10 +1,10 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <link rel="stylesheet" href="./nerdieluv.css">
     <title>NerdLuv</title>
 </head>
+
 <body>
     <header id="bannerarea">
         <a href="./index.php"><img src="./images/nerd-love.png" alt="nerd love logo" /></a>
@@ -70,7 +70,7 @@ Thank you for using our site.
 Results and page (C) Copyright NerdLuv Inc.
         </pre>
         <p>
-            <a href="./index.php"><img src="./images/back.png" alt="back"/>Back to front page</a>
+            <a href="./index.php"><img src="./images/back.png" alt="back" />Back to front page</a>
         </p>
     </footer>
 </body>
