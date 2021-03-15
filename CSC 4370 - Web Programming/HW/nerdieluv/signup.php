@@ -2,6 +2,7 @@
     <link rel="stylesheet" href="./nerdieluv.css">
     <title>NerdLuv</title>
 </head>
+
 <header id="bannerarea">
     <img src="./images/nerd-love.png" alt="nerd love logo" />
     <br>
