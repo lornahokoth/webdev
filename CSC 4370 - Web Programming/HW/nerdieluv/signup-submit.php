@@ -7,15 +7,15 @@
 </head>
 <body>
     <?php 
-        $name = $_POST['name'];
-        $gender = $_POST['gender'];
-        $age = $_POST['age'];
-        $personality = $_POST['personality'];
-        $os = $_POST['OS'];
-        $min = $_POST['minAge'];
-        $max = $_POST['maxAge'];
-        $line = $name . ',' . $gender . ',' . $age . ',' . $personality . ',' . $os . ',' . $min . ',' . $max;
-        file_put_contents("singles.txt", $line, FILE_APPEND);
+        $name = $_POST["name"];
+        $gender = $_POST["gender"];
+        $age = $_POST["age"];
+        $personality = $_POST["personality"];
+        $os = $_POST["OS"];
+        $min = $_POST["minAge"];
+        $max = $_POST["maxAge"];
+        $line = $name . "," . $gender . "," . $age . "," . $personality . "," . $os . "," . $min . "," . $max . "\n";
+        file_put_contents("./data/singles.txt", $line, FILE_APPEND);
     ?>
     <header id="bannerarea">
         <a href="./index.php"><img src="./images/nerd-love.png" alt="nerd love logo" /></a>
@@ -24,7 +24,7 @@
     </header>
     <h1>Thank you!</h1>
     <p>
-        Welcome to NerdLuv, <?php echo $_POST['name']; ?>
+        Welcome to NerdLuv, <?php echo $_POST["name"]; ?>
     </p>
     <p>
         <a href="./matches.php">Now go see your matches!</a>
