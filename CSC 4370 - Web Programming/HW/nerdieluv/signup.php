@@ -44,9 +44,9 @@
             <label><strong>Favorite OS:</strong></label>
             <div>
                 <select name="OS" id="class">
-                    <option value="WS">Windows</option>
-                    <option value="MS">Mac OS X</option>
-                    <option value="LX">Linux</option>
+                    <option value="Windows">Windows</option>
+                    <option value="Mac OS X">Mac OS X</option>
+                    <option value="Linux">Linux</option>
                 </select>
             </div>
             <br>

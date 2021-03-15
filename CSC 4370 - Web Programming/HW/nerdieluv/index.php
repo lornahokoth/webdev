@@ -24,6 +24,17 @@
             <a href="./matches.php"><img src="./images/sign-up.png" alt="sign-up" /> Check your matches</a>
         </div>
     </div>
+    <footer>
+        <pre>
+This page is for single nerds to meet and date each other!
+Type in your personal information and wait for the nerdy luv to begin!
+Thank you for using our site.
+Results and page (C) Copyright NerdLuv Inc.
+        </pre>
+        <p>
+            <a href="./index.php"><img src="./images/back.png" alt="back" />Back to front page</a>
+        </p>
+    </footer>
 </body>
 
 </html>
