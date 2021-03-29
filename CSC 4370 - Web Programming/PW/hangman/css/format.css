@@ -1,0 +1,435 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+}
+header .row {
+  margin-top: 8px;
+  width: 95%;
+  padding: 15px 15px 0px 15px;
+}
+body {
+  font-family: monospace;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+}
+.gamespace {
+  height: 80%;
+}
+.col {
+  flex: 1;
+}
+.extraWide {
+  flex: 5;
+  text-align: center;
+}
+.flexright {
+  justify-content: right;
+}
+.login {
+  font-size: 1em;
+  padding: 10px;
+  color: #ccff02;
+  cursor: pointer;
+  border: 2px solid #ccff02;
+  border-radius: 0.6em;
+  text-decoration: none;
+}
+#title {
+  font-size: 5em;
+  text-align: center;
+}
+#username {
+  text-align: right;
+  margin: auto;
+}
+#letterbox {
+  padding: 2em;
+  flex: 1;
+}
+#availLetter {
+  margin-top: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 15pt;
+}
+#man {
+  flex: 1;
+}
+#man img {
+  width: 460px;
+}
+.gamelayout {
+  width: 700px;
+  margin: auto;
+  height: 100%;
+}
+.row {
+  display: flex;
+  width: 100%;
+  padding: 15px 15px 0px 15px;
+}
+#letters {
+  width: 318px;
+  font-size: 20pt;
+}
+#letters tr td {
+  width: 53px;
+  text-align: center;
+  background-color: #ccff02;
+  border-radius: 0.2em;
+  border: 2px solid #263646;
+}
+#word {
+  display: flex;
+  justify-content: center;
+}
+.crossout {
+  text-decoration: line-through;
+  color: rgb(190, 190, 190);
+  background-color: #263646 !important;
+}
+.textbox {
+  flex: 2;
+  margin: auto;
+  justify-content: right;
+}
+.submit {
+  flex: 1;
+  margin: auto;
+}
+.empty {
+  flex: 1;
+  margin: auto;
+}
+legend {
+  font-size: 2em;
+  color: #ccff02;
+}
+.loginColumn {
+  font-size: 2em;
+  color: #ccff02;
+}
+input[type="submit"] {
+  font-size: 17pt;
+  font-family: monospace;
+  background-color: transparent;
+  border: 2px solid #ccff02;
+  border-radius: 4px;
+  border-radius: 0.6em;
+  color: #ccff02;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  transition: all 0.5s ease-out;
+  background: #ccff02;
+  color: #2c3e50;
+}
+input[type="text"] {
+  font-size: 20pt;
+  border: none;
+  border-bottom: 2px solid #ccff02;
+  padding: 12px 20px;
+}
+/* title button */
+.pdisplay {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tdisplay {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tdisplay a {
+  text-align: center;
+  width: 30%;
+}
+.tdisplay .btn {
+  width: 300px;
+}
+
+/* css for level buttons */
+.gameplay-sel {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin: 0 auto;
+  animation: moveInButton 1.25s ease-out;
+}
+.btn {
+  justify-content: center;
+  width: 400px;
+  appearance: none;
+  background-color: transparent;
+  border: 3px solid #ccff02;
+  border-radius: 0.6em;
+  color: #ccff02;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  font-family: monospace;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+}
+.btn:hover,
+.btn:focus {
+  color: #2c3e50;
+  outline: 0;
+  text-decoration: none;
+  font-weight: 550;
+}
+.level {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.level:hover {
+  box-shadow: 0 0 40px 40px #ccff02 inset;
+}
+/* typing */
+.playlevels {
+  width: auto;
+  text-align: center;
+  font-size: 2em;
+}
+
+.playlevels p,
+h1 {
+  justify-content: center;
+  color: #ccff02;
+  display: inline-block;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.5em solid #fff;
+  white-space: nowrap;
+  margin: auto;
+  text-align: center;
+  letter-spacing: 0.15em;
+  animation: type 2s steps(35, end), flicker 0.75s step-end infinite;
+}
+.rules ul {
+  justify-content: center;
+  display: inline-block;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.5em solid #fff;
+  white-space: nowrap;
+  animation: type 4.5s steps(35, end);
+  width: 500px;
+}
+.rules p,
+h2 {
+  justify-content: center;
+  color: #ccff02;
+  display: inline-block;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.5em solid #fff;
+  white-space: nowrap;
+  text-align: center;
+  letter-spacing: 0.15em;
+  animation: type 4.5s steps(35, end);
+  width: 500px;
+}
+@keyframes type {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+@keyframes flicker {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #fff;
+  }
+}
+/* css for hint pop up */
+.hbutton {
+  font-size: 17pt;
+  padding: 16px 32px;
+  margin: auto;
+  margin-left: 10px;
+  color: #ccff02;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #ccff02;
+  border-radius: 0.6em;
+  text-decoration: none;
+  flex: 1;
+  font-family: monospace;
+}
+.hbutton:hover {
+  background: #ccff02;
+  color: #2c3e50;
+}
+.overlay {
+  background: transparent;
+  visibility: hidden;
+  opacity: 0;
+  color: #2c3e50;
+}
+.overlay1 {
+  background: transparent;
+  visibility: hidden;
+  opacity: 0;
+  color: #2c3e50;
+  position: fixed;
+}
+
+.overlay:target,
+.overlay1:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup1 {
+  margin: 0 auto;
+}
+.popup1 p {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 12pt;
+}
+.popup {
+  margin: 20px 0px 20px auto;
+  padding: 10px;
+  background: #ccff02;
+  border-radius: 5px;
+  max-width: fit-content;
+}
+.popup .close {
+  transition: all 350ms;
+  font-size: 25px;
+  font-weight: 900;
+  text-decoration: none;
+  color: #2c3e50;
+}
+.popup .close:hover {
+  color: red;
+  font-weight: 900;
+}
+.popup .content {
+  overflow: auto;
+}
+.popup h2, .popup p {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 12pt;
+  padding: 0 15px;
+}
+.letter {
+  flex: 1;
+  max-width: 25px;
+  font-size: 30pt;
+  text-align: center;
+  font-weight: 500;
+  color: #ccff02;
+}
+.background {
+  background-color: #263646;
+}
+.back {
+  width: 62px;
+}
+.text {
+  font-size: 1em;
+  color: #ccff02;
+  display: flex;
+}
+.logoutDiv {
+  width: 100%;
+  text-align: right;
+}
+.logout {
+  color: #ccff02;
+}
+.infoColLeft {
+  flex: 1;
+}
+.infoColRight {
+  flex: 1;
+  margin: auto;
+  text-align: center;
+  margin-left: 10px;
+}
+.leftLab {
+  text-align: right;
+  flex: 1;
+}
+.rightLab {
+  text-align: left;
+  flex: 1;
+}
+.footer {
+  font-size: 1em;
+  color: #ccff02;
+  text-align: center;
+}
+.right {
+  text-align: right;
+  margin-right: 10px;
+}
+.alignRight {
+  text-align: right;
+}
+/* credits css */
+.column {
+  font-size: 2em;
+  color: #ccff02;
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.column h2 {
+  text-align: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.blank {
+  height: 2em;
+}
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  font-size: 15pt;
+  height: 4em;
+}
+
+@keyframes moveInButton {
+  from {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

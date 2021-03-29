@@ -1,0 +1,5 @@
+bob|E|150
+steve|E|150
+john|E|150
+john|I|10001
+bob|I|10010
