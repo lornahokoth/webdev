@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        function findColor(bgColor, txtColor){
+            document.body.style.background = bgColor;
+            document.body.style.color = txtColor;
+        }
+    </script>
+   
+</head>
+
+<body>
+    <h1>Part 1</h1>
+    <h3> 1.)</h3>
+    <script>
+        var first = 0,
+            second = 1;
+
+        fibNum(10);
+
+        function fibNum(n) {
+            if (n == 1) {
+                document.write(first);
+            } else if (n == 2) {
+                document.write(first + ", " + second);
+            } else {
+                document.write(first + ", " + second + ", ");
+                for (i = 2; i < n; i++) {
+                    let current = first + second;
+                    first = second;
+                    second = current;
+                    document.write(current + ", ");
+                }
+            }
+        }
+    </script>
+
+    <h3>2.)</h3>
+    <script>
+        function asterisks(x) {
+            for (i = 1; i <= x; i++) {
+                for (j = 0; j < i; j++) {
+                    document.write("* ");
+                }
+                document.write("<br>");
+            }
+        }
+        asterisks(5);
+    </script>
+
+    <h3>3.)</h3>
+    <script>
+        var arr1 = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+
+        for (i = 0; i < arr1.length; i++) {
+            for (j = i + 1; j < arr1.length; j++) {
+                if (arr1[i] > arr1[j]) {
+                    let temp = arr1[i]
+                    arr1[i] = arr1[j]
+                    arr1[j] = temp
+                }
+            }
+        }
+        document.write(arr1);
+    </script>
+
+    <h3>4.)</h3>
+    <script>
+        var arr2 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        var maxCount = 0
+        var maxValue
+
+        for (i = 0; i < arr2.length; i++) {
+            var count = 0
+            for (j = 0; j < arr2.length; j++) {
+                if (arr2[i] == arr2[j]) {
+                    count++
+                }
+            }
+            if (count > maxCount) {
+                maxCount = count
+                maxValue = arr2[i]
+            }
+        }
+        document.write(maxValue + " (" + maxCount + " times)")
+    </script>
+
+    <h3>5.)</h3>
+    <script>
+        var num = [1, 2, 3, 4, 5, 6]
+
+        for(i = 0; i < num.length; i++){
+            let randIndex = Math.floor(Math.random() * num.length)
+            let temp = num[i]
+            num[i] = num[randIndex]
+            num[randIndex] = temp
+        }
+        document.write(num)
+    </script>
+
+    <h3>6.)</h3>
+    <script>
+        var bgColor = prompt("What background color do you want?")
+        var txtColor = prompt("What text color do you want?")
+        findColor(bgColor, txtColor)
+    </script>
+</body>
+
+
+</html>
