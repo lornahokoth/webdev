@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form_validator.css"/>
+    <script src="form_validator.js"></script>
+    <title>Form Validator</title>
+   
+</head>
+
+<body>
+    <div id="id_error" class="row hidden">
+        <div class="lcol">
+
+        </div>
+        <div class="rcol error">
+            Please Enter an ID
+        </div>
+    </div>
+    <div class="row">
+        <div class="lcol">
+            <label>ID: </label>
+        </div>
+        <div class="rcol">
+            <input type="text" id="id" size="10">
+        </div>
+    </div>
+    <div id="fname_error" class="row hidden">
+        <div class="lcol">
+
+        </div>
+        <div class="rcol error">
+            Please Enter a First Name
+        </div>
+    </div>
+    <div class="row">
+        <div class="lcol">
+            <label>FirstName: </label>
+        </div>
+        <div class="rcol">
+            <input type="text" id="fname" size="10">
+        </div>
+    </div>
+    <div id="lname_error" class="row hidden">
+        <div class="lcol">
+
+        </div>
+        <div class="rcol error">
+            Please Enter a Last Name
+        </div>
+    </div>
+    <div class="row">
+        <div class="lcol">
+            <label>LastName: </label>
+        </div>
+        <div class="rcol">
+            <input type="text" id="lname" size="10">
+        </div>
+    </div>
+    <div class="row">
+        <div class="lcol"></div>
+        <div class="rcol">
+            <button type="button" onclick="validate()">Add</button>
+        </div>
+    </div>
+    <div id="display">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+.show p,
+.hide img {
+    display: none;
+}
+
+.show img,
+.hide p {
+    display: block;
+}
+
+.correct p {
+    display: none;
+}
+.correct img {
+    display: block;
+}
+
+img {
+    width: 150px;
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+p {
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+td {
+    width: 155px;
+    text-align: center;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+#timer {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#result {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.congrats {
+    color:green;
+}
+
+.timesup {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}

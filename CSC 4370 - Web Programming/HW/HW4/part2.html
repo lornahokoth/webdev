@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./part2.css"/>
+    <title>Part 1</title>
+    <script src="./part2.js"></script>
+</head>
+
+<body>
+    <div>
+        <button id="showRules" onclick="showRules()">Show Rules</button>
+        <div id="rules" class="hidden">
+            <ul>
+                <li>
+                    Select the number of pictures you want to play with
+                    <ul>
+                        <li>8 Picutres - 120 seconds to find all matches</li>
+                        <li>10 Pictures - 150 seconds to find all matches</li>
+                        <li>12 Pictures - 180 seconds to find all matches</li>
+                    </ul>
+                </li>
+                <li>
+                    Select your difficulty
+                    <ul>
+                        <li>Easy - 8 seconds to memorize the board</li>
+                        <li>Medium - 5 seconds to memorize the board</li>
+                        <li>Hard - 3 seconds to memorize the board</li>
+                    </ul>
+                </li>
+                <li>Click a number to flip a card</li>
+                <li>When two cards are flipped
+                    <ul>
+                        <li>If the numbers match they will remain visible</li>
+                        <li>If the numbers don't match they will be flipped back over</li>
+                    </ul>
+                </li> 
+                <li>The game ends when you match all pictures or run out of time</li>
+            </ul>
+        </div>
+    </div>
+    <div id="difficulty_select">
+        <label>Select number of pictures: </label>
+        <br>
+        <input type="radio" id="eight" name="num_pics" value="8" checked="checked">
+        <label for="eight">8 Pictures</label>
+        <input type="radio" id="ten" name="num_pics" value="10">
+        <label for="ten">10 Pictures</label>
+        <input type="radio" id="twelve" name="num_pics" value="12">
+        <label for="twelve">12 Pictures</label>
+        <br><br>
+        <label>Select a difficulty: </label>
+        <br>
+        <input type="radio" id="easy" name="difficulty" value="8" checked="checked">
+        <label for="easy">Easy</label>
+        <input type="radio" id="medium" name="difficulty" value="5">
+        <label for="medium">Medium</label>
+        <input type="radio" id="hard" name="difficulty" value="3">
+        <label for="hard">Hard</label>
+        <br>
+        <br>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <br>
+    <div id="timer">
+        
+    </div>
+    <br>
+    <div id="gameboard">
+        <table id="board">
+            
+        </table>
+    </div>
+    <div id="result">
+        
+    </div>
+    <br>
+    <a href="./part1.html">Part 1</a>
+</body>
+</html>
