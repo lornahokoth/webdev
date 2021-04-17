@@ -6,7 +6,7 @@
     <title>Login</title>
   </head>
   <body>
-    <h1>Login</h1>
+    <h1>Login/Sign Up</h1>
     <form action="../controllers/login.php?func=login" method="post">
       <fieldset>
         <legend>Login</legend>
