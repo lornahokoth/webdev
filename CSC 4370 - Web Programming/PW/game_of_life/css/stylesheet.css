@@ -1,0 +1,21 @@
+.failure {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.alive {
+    background-color: blue;
+}
+
+.dead {
+    background-color: white;
+}
+
+td {
+    width: 25px;
+    height: 25px;
+    border: black 1px solid;
+}
