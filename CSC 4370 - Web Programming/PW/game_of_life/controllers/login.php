@@ -28,13 +28,13 @@ function register() {
 
     if(!isset($_POST['username']) || !isset($_POST['password'])) {
         setcookie("error", "Username/Password not provided.");
-        header("Location: ../view/login.php");
+        header("Location: ../views/login.php");
         return;
     }
 
     if($_POST['password'] != $_POST['repeat_password']) {
         setcookie("error", "Username/Password not provided.");
-        header("Location: ../view/login.php");
+        header("Location: ../views/login.php");
         return;
     }
 
@@ -49,7 +49,7 @@ function register() {
 
     if(checkUser($username)) {
         setcookie("error", "Username already exists.");
-        header("Location: ../view/login.php");
+        header("Location: ../views/login.php");
         return;
     } else {
         $password = md5(md5($_POST['password']) . $salt);
@@ -59,7 +59,7 @@ function register() {
 
         setcookie("error", false);
         setcookie("username", $username);
-        header("Location: ../view/login.php");
+        header("Location: ../views/login.php");
         return;
     }
 }
@@ -93,11 +93,11 @@ function login() {
             if($u[2] == $password) {
                 setcookie("error", false);
                 setcookie("username", $username);
-                header("Location: ../view/title.php");
+                header("Location: ../views/title.php");
             } else {
                 setcookie("error", "Incorrect Login/Password.");
                 setcookie("username", $username);
-                header("Location: ../view/login.php");
+                header("Location: ../views/login.php");
             }
 
             return;
@@ -107,7 +107,7 @@ function login() {
     //redirect to login page with no user found set
     setcookie("error", "Username not found.");
     setcookie("username", $username);
-    header("Location: ../view/login.php");
+    header("Location: ../views/login.php");
     return;
 }
 
@@ -116,5 +116,5 @@ function logout() {
         setcookie($key, false);
     }
     
-    header("Location: ../view/login.php");
+    header("Location: ../views/login.php");
 }
