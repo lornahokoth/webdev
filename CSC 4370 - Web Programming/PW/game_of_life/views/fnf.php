@@ -6,7 +6,7 @@
     <title>Function Not Found</title>
 </head>
 <body>
-    <h1>Function <?php echo $_COOKIE['error_header']; ?></h1>
+    <h1><?php echo $_COOKIE['error_header']; ?></h1>
     <?php echo $_COOKIE['error_body']; ?>
 </body>
 </html>

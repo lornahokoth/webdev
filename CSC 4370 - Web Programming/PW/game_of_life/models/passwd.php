@@ -21,4 +21,6 @@ function getLastUser() {
     $file = escapeshellarg($passwd);
     $line = `tail -n 1 $file`;
     $id = explode('|', $line);
+
+    return $id;
 }

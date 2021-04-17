@@ -12,8 +12,8 @@ if(function_exists($_GET['func'])) {
     $_GET['func']();
 } else {
     //return 404 not found;
-    setcookie("error_header", "Function could not be found");
-    setcookie("error_body", "Function " . $_GET['func'] . " not found.<br>HTTP ERROR 404");
+    setcookie("error_header", "Function could not be found", 0, "/");
+    setcookie("error_body", "Function " . $_GET['func'] . " not found.<br>HTTP ERROR 404", 0, "/");
     header("Location: ../views/fnf.php");
     return;
 }
@@ -26,14 +26,14 @@ function register() {
     global $salt;
     global $passwd;
 
-    if(!isset($_POST['username']) || !isset($_POST['password'])) {
-        setcookie("error", "Username/Password not provided.");
+    if(empty($_POST['newuser']) || empty($_POST['newpswd']) || empty($_POST['retype'])) {
+        setcookie("error", "Username/Password not provided.", 0, "/");
         header("Location: ../views/login.php");
         return;
     }
 
-    if($_POST['password'] != $_POST['repeat_password']) {
-        setcookie("error", "Username/Password not provided.");
+    if($_POST['newpswd'] != $_POST['retype']) {
+        setcookie("error", "Passwords do not match", 0, "/");
         header("Location: ../views/login.php");
         return;
     }
@@ -45,20 +45,20 @@ function register() {
         chmod($passwd, 0777);
     }
 
-    $username = $_POST['username'];
+    $username = $_POST['newuser'];
 
     if(checkUser($username)) {
-        setcookie("error", "Username already exists.");
+        setcookie("error", "Username already exists.", 0, "/");
         header("Location: ../views/login.php");
         return;
     } else {
-        $password = md5(md5($_POST['password']) . $salt);
+        $password = md5(md5($_POST['newpswd']) . $salt);
         $userID = getNewUserId();
         $newUser = $userID . "|" . $username . "|" . $password . "\n";
         addUser($newUser);
 
-        setcookie("error", false);
-        setcookie("username", $username);
+        setcookie("error", false, 0, "/");
+        setcookie("username", $username, 0, "/");
         header("Location: ../views/login.php");
         return;
     }
@@ -84,19 +84,19 @@ function getNewUserId() {
 function login() {
     global $salt;
     $username = $_POST['username'];
-    $password = md5(md5($_POST['password']) . $salt);
+    $password = md5(md5($_POST['pswd']) . $salt);
 
     $users = getUserList();
     foreach($users as $user) {
         $u = explode('|', $user);
         if($u[1] == $username) {
             if($u[2] == $password) {
-                setcookie("error", false);
-                setcookie("username", $username);
-                header("Location: ../views/title.php");
+                setcookie("error", false, 0, "/");
+                setcookie("username", $username, 0, "/");
+                header("Location: ../views/mainpage.php");
             } else {
-                setcookie("error", "Incorrect Login/Password.");
-                setcookie("username", $username);
+                setcookie("error", "Incorrect Login/Password.", 0, "/");
+                setcookie("username", $username, 0, "/");
                 header("Location: ../views/login.php");
             }
 
@@ -105,15 +105,15 @@ function login() {
     }
 
     //redirect to login page with no user found set
-    setcookie("error", "Username not found.");
-    setcookie("username", $username);
+    setcookie("error", "Username not found.", 0, "/");
+    setcookie("username", $username, 0, "/");
     header("Location: ../views/login.php");
     return;
 }
 
 function logout() {
     foreach ($_COOKIE as $key => $value) {
-        setcookie($key, false);
+        setcookie($key, false, 0, "/");
     }
     
     header("Location: ../views/login.php");
