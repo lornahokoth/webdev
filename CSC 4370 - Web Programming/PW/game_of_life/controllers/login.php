@@ -93,7 +93,7 @@ function login() {
             if($u[2] == $password) {
                 setcookie("error", false, 0, "/");
                 setcookie("username", $username, 0, "/");
-                header("Location: ../views/mainpage.php");
+                header("Location: ../views/starting.html");
             } else {
                 setcookie("error", "Incorrect Login/Password.", 0, "/");
                 setcookie("username", $username, 0, "/");
