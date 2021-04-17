@@ -9,7 +9,7 @@
     <h1>Game of Life</h1>
 
     <a id="buttons">
-        <a href="./login.html"><button id="login" type="button">Login</button></a>
+        <a href="./login.php"><button id="login" type="button">Login</button></a>
         <a href=""><button id="rules" type="button">Rules</button></a>
     </div>
 </body>
