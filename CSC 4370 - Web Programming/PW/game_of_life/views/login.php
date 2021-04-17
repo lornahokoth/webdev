@@ -3,10 +3,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/lifestylesheet.css" />
+    <script src="../js/login.js"></script>
+    <script src="../js/common.js"></script>
     <title>Login</title>
   </head>
-  <body>
+  <body onload="populateLogin()">
     <h1>Login/Sign Up</h1>
+    <label id="message" name="message"></label>
     <form action="../controllers/login.php?func=login" method="post">
       <fieldset>
         <legend>Login</legend>
