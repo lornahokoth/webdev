@@ -7,19 +7,32 @@ include '../models/passwd.php';
 $passwd = "../data/passwd";
 $salt = "m1n1Cl0ud$";
 
+//Simple code created to handle routing to the proper functions.
 if(function_exists($_GET['func'])) {
     $_GET['func']();
 } else {
     //return 404 not found;
-    header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
+    setcookie("error_header", "Function could not be found");
+    setcookie("error_body", "Function " . $_GET['func'] . " not found.<br>HTTP ERROR 404");
+    header("Location: ../views/fnf.php");
     return;
 }
 
+//Function that handles registering a new user.
+//Input:
+//   username - must be unique set of characters.
+//   password - 
 function register() {
     global $salt;
     global $passwd;
 
     if(!isset($_POST['username']) || !isset($_POST['password'])) {
+        setcookie("error", "Username/Password not provided.");
+        header("Location: ../view/login.php");
+        return;
+    }
+
+    if($_POST['password'] != $_POST['repeat_password']) {
         setcookie("error", "Username/Password not provided.");
         header("Location: ../view/login.php");
         return;
