@@ -12,7 +12,7 @@
         <legend>Login</legend>
         <input type="text" id="username" name="username" maxlength="16" placeholder="Username"/><br /><br />
         <input type="password" id="pswd" name="pswd" placeholder="Password"/><br /><br />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Login" />
       </fieldset>
     </form> 
     <form action="../controllers/login.php?func=register" method="post">
@@ -21,7 +21,7 @@
         <input type="text" id="newuser" name="newuser" maxlength="16" placeholder="New Username"/><br /><br />
         <input type="password" id="newpswd" name="newpswd" placeholder="New Password" /><br /><br />
         <input type="password" id="retype" name="retype" placeholder="Confirm Password"/><br /><br />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Register" />
         </fieldset>
   </body>
 </html>
