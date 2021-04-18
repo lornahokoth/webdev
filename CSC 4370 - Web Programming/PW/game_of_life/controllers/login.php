@@ -31,7 +31,7 @@ function register() {
     if(empty($_POST['newuser']) || empty($_POST['newpswd']) || empty($_POST['retype'])) {
         setcookie("message", "Username/Password not provided.", 0, "/");
         setcookie("status", "failure", 0, "/");
-        header("Location: ../views/login.php");
+        header("Location: ../views/homepage.php");
         return;
     }
 
@@ -39,7 +39,7 @@ function register() {
         setcookie("username", $_POST['newuser'], 0, "/");
         setcookie("message", "Passwords do not match", 0, "/");
         setcookie("status", "failure", 0, "/");
-        header("Location: ../views/login.php");
+        header("Location: ../views/homepage.php");
         return;
     }
 
@@ -54,7 +54,7 @@ function register() {
     if(checkUser($username)) {
         setcookie("message", "Username already exists.", 0, "/");
         setcookie("status", "failure", 0, "/");
-        header("Location: ../views/login.php");
+        header("Location: ../views/homepage.php");
         return;
     } else {
         $password = md5(md5($_POST['newpswd']) . $salt);
@@ -65,7 +65,7 @@ function register() {
         setcookie("username", $username, 0, "/");
         setcookie("message", "Username successfully created.  Please login.", 0, "/");
         setcookie("status", "success", 0, "/");
-        header("Location: ../views/login.php");
+        header("Location: ../views/homepage.php");
         return;
     }
 }
@@ -93,7 +93,7 @@ function login() {
     setcookie("func", "login", 0, "/");
 
     if(empty($_POST['username']) || empty($_POST['pswd'])) {
-        header("Location: ../views/login.php");
+        header("Location: ../views/homepage.php");
         return;
     }
 
@@ -111,7 +111,7 @@ function login() {
                 setcookie("message", "Incorrect Login/Password.", 0, "/");
                 setcookie("username", $username, 0, "/");
                 setcookie("status", "failure", 0, "/");
-                header("Location: ../views/login.php");
+                header("Location: ../views/homepage.php");
             }
 
             return;
@@ -122,7 +122,7 @@ function login() {
     setcookie("message", "Username not found.", 0, "/");
     setcookie("username", $username, 0, "/");
     setcookie("status", "failure", 0, "/");
-    header("Location: ../views/login.php");
+    header("Location: ../views/homepage.php");
     return;
 }
 
@@ -134,5 +134,5 @@ function clearCookies() {
 
 function logout() {    
     clearCookies();
-    header("Location: ../views/login.php");
+    header("Location: ../views/homepage.php");
 }

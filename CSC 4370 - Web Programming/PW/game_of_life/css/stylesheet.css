@@ -1,21 +1,262 @@
-.failure {
-    color: red;
+@font-face {
+  font-family: "titleFont";
+  src: url(../asset/ZenDots-Regular.ttf);
 }
 
+@font-face {
+  font-family: "headerFont";
+  src: url(../asset/QuattrocentoSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: "commonFont";
+  src: url(../asset/OpenSans-Regular.ttf);
+}
+#title {
+    font-family: "titleFont";
+    color: #120078;
+    font-size: 72px;
+    background: -webkit-linear-gradient(#fecd1a, #fd3a69, #9d0191, #120078);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+td {
+  width: 25px;
+  height: 25px;
+  border: black 1px solid;
+}
+
+body {
+  font-family: "commonFont";
+  background: #ebebeb;
+  color: #fd3a69;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: -20px 0 50px;
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid #fd3a69;
+  background: #fd3a69;
+  color: white;
+  font-family: "commonFont";
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  transition: 80ms ease-in;
+}
+button:hover {
+  background: #fecd1a;
+  border: 1px solid #fecd1a;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background: transparent;
+  border-color: #fff;
+}
+button.ghost:hover {
+  background: white;
+  color: #9d0191;
+}
+
+button:disabled {
+  background-color: grey;
+  border: 1px solid grey;
+}
+
+.heading {
+    font-family: "headerFont";
+  }
+
+  /* Gameplay Design */
 .hidden {
-    display: none;
+  display: none;
 }
 
 .alive {
-    background-color: blue;
+  background-color: blue;
 }
 
 .dead {
-    background-color: white;
+  background-color: white;
 }
 
-td {
-    width: 25px;
-    height: 25px;
-    border: black 1px solid;
+.gameplayOverlay {
+  background-color: rgba(1, 1, 1, 0);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+/* Homepage Design */
+.failure {
+    color: red;
+  }
+  
+.homepageH {
+  font-weight: bold;
+  margin: 0;
+}
+
+.homepageP {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 10px;
+}
+
+.homepageSpan {
+  margin: 10px 0 20px;
+}
+
+.box {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+}
+
+.form-box {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.form-box form {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.form-box input {
+  background: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.login-box {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.signUp-box {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.overlay-box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.overlay {
+  background: #9d0191;
+  background: linear-gradient(45deg, #fecd1a, #fd3a69, #9d0191, #120078);
+  color: white;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlayRight {
+  right: 0;
+  transform: translateX(0);
+}
+
+.overlayLeft {
+  transform: translateX(-20%);
+}
+
+.colorFontHomepage {
+  color: #9d0191;
+}
+
+.bgColorHomepage {
+  background: #9d0191;
+  border: 1px solid #9d0191;
+}
+/* Animation */
+
+/* Slide sign to the right */
+.box.right-panel-active .login-box {
+  transform: translateX(100%);
+}
+/* Slide overlay to left */
+.box.right-panel-active .overlay-box {
+  transform: translateX(-100%);
+}
+
+/* Sign Up over Log In */
+.box.right-panel-active .signUp-box {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+/* Overlay to the back and right */
+.box.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.box.right-panel-active .overlayLeft {
+  transform: translateX(0);
+}
+
+.box.right-panel-active .overlayRight {
+  transform: translateX(20%);
 }
