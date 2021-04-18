@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/stylesheet.css">
+  <script src="../js/homepage.js"> </script>
   <title> Game Of Life </title>
 </head>
 
@@ -46,8 +47,6 @@
       </div>
     </div>
   </div>
-
-  <script src="../js/login.js"> </script>
 </body>
 
 </html>
