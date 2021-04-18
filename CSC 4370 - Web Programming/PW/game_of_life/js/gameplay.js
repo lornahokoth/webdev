@@ -260,13 +260,13 @@ function populateArray(arr) {
     return arr;
 }
 
-function disableScreen() {
-    document.getElementById("gameOverlay").classList.add("gameplayOverlay");
-}
+// function disableScreen() {
+//     document.getElementById("gameOverlay").classList.add("gameplayOverlay");
+// }
 
-function enableScreen() {
-    document.getElementById("gameOverlay").classList.remove("gameplayOverlay");
-}
+// function enableScreen() {
+//     document.getElementById("gameOverlay").classList.remove("gameplayOverlay");
+// }
 
 async function generate() {
     currentGen = populateArray(currentGen);
@@ -276,7 +276,7 @@ async function generate() {
     numSteps = document.getElementById("numGenerations").value;
     rows = document.getElementById("rows").value;
     cols = document.getElementById("cols").value;
-    disableScreen();
+    // disableScreen();
     for (step = 1; step <= numSteps; step++) {
         for (i = 0; i < rows; i++) {
             for (j = 0; j < cols; j++) {
@@ -314,7 +314,7 @@ async function generate() {
         await timer(500);
         displayTable();
     }
-    enableScreen();
+    // enableScreen();
 }
 
 function displayTable() {

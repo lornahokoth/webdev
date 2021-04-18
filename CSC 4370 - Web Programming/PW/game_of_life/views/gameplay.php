@@ -8,28 +8,15 @@
     <title>Game of Life</title>
   </head>
   <body onload="loadGameplay()">
-    <?php include("./header.php"); ?>
-    <div id="gameOverlay"></div>
-    <div class="body">
-        <div class="gamestats">
-            <fieldset>
-                <legend>
-                    Game Stats
-                </legend>
-                <label for="gen">Generation: </label>
-                <label id="gen" name="gen"></label>
-                <br>
-                <label for="pop">Population: </label>
-                <label id="pop" name="pop"></label>
-            </fieldset>
-        </div>
+    <h1 id="title"> GAME OF LIFE </h1>
+    <div class="box gamearea">
         <div class="gameboard">
             <table id="golTable" name="golTable">
 
             </table>
         </div>
-        <div class="gameoptions">
-            <fieldset>
+        <div class="controls">
+            <fieldset id="options">
                 <legend>
                     Game Options
                 </legend>
@@ -54,8 +41,17 @@
                 <label for="cols">Num Columns: </label>
                 <input type="number" id="cols" name="cols" min="5" max="40" onchange="checkTableSize('cols')">
             </fieldset>
+            <fieldset id="stats">
+                <legend>
+                    Game Stats
+                </legend>
+                <label for="gen">Generation: </label>
+                <label id="gen" name="gen"></label>
+                <br>
+                <label for="pop">Population: </label>
+                <label id="pop" name="pop"></label>
+            </fieldset>
         </div>
     </div>
-    <?php include("./footer.php"); ?>
   </body>
 </html>

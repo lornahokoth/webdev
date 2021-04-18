@@ -29,6 +29,9 @@ function register() {
     clearCookies();
     setcookie("func", "register", 0, "/");
     if(empty($_POST['newuser']) || empty($_POST['newpswd']) || empty($_POST['retype'])) {
+        if(!empty($_POST['newuser'])) {
+            setcookie("username", $_POST['newuser'], 0, "/");
+        }
         setcookie("message", "Username/Password not provided.", 0, "/");
         setcookie("status", "failure", 0, "/");
         header("Location: ../views/homepage.php");
@@ -52,6 +55,7 @@ function register() {
     $username = $_POST['newuser'];
 
     if(checkUser($username)) {
+        setcookie("username", $_POST['newuser'], 0, "/");
         setcookie("message", "Username already exists.", 0, "/");
         setcookie("status", "failure", 0, "/");
         header("Location: ../views/homepage.php");
@@ -106,7 +110,8 @@ function login() {
         if(strtolower($u[1]) == strtolower($username)) {
             if($u[2] == $password) {
                 setcookie("username", $username, 0, "/");
-                header("Location: ../views/startpage.php");
+                setcookie("status", "success", 0, "/");
+                header("Location: ../views/homepage.php");
             } else {
                 setcookie("message", "Incorrect Login/Password.", 0, "/");
                 setcookie("username", $username, 0, "/");

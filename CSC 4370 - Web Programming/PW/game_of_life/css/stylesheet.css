@@ -19,11 +19,6 @@
     background: -webkit-linear-gradient(#fecd1a, #fd3a69, #9d0191, #120078);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-td {
-  width: 25px;
-  height: 25px;
-  border: black 1px solid;
 }
 
 body {
@@ -82,16 +77,57 @@ button:disabled {
   }
 
   /* Gameplay Design */
+
+#golTable {
+  border-collapse: collapse;
+}
+
+#options {
+  flex: 2;
+}
+
+#stats {
+  flex: 1;
+}
+
+td {
+  width: 25px;
+  height: 25px;
+  border: black 2px solid;
+}  
+
 .hidden {
   display: none;
 }
 
 .alive {
-  background-color: blue;
+  background-color: #fecd1a;
 }
 
 .dead {
-  background-color: white;
+  background-color: #120078;
+}
+
+.gamearea {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 65% !important;
+  max-width: 100%;
+  min-height: 480px;
+  padding: 10px 10px;
+}
+
+.gameboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
 }
 
 .gameplayOverlay {

@@ -15,18 +15,32 @@ function populateLogin() {
     var message = getCookie("message");
     var status = getCookie("status");
     var func = getCookie("func");
-    if(username  == "") {
-        return
+   
+    if(username == "") {
+        return;
     }
-    if(func == "register" && status == "failure") {
-        document.getElementById("newuser").value = username;
+
+    if(username != "" && func == "login" && status == "success") {
+        document.getElementById("loginDisplay").classList.add("hidden");
+        document.getElementById("playDisplay").classList.remove("hidden");
     } else {
-        document.getElementById("username").value = username;
-    }
-    document.getElementById("message").innerHTML = message;
-    if(status == "failure") {
-        document.getElementById("message").classList.add("failure");
-    } else {
-        document.getElementBvyId("message").classList.remove("failure");
+        document.getElementById("loginDisplay").classList.remove("hidden");
+        document.getElementById("playDisplay").classList.add("hidden");
+        if((func == "login" && status == "failure") || (func == "register" && status == "success")) {
+            labelId = "loginMessage";
+            userId = "username";
+        } else {
+            labelId = "registerMessage";
+            userId = "newuser";
+            box.classList.add("right-panel-active");
+        }
+
+        document.getElementById(labelId).innerHTML = message;
+        document.getElementById(userId).value = username;
+        if(status == "failure") {
+            document.getElementById(labelId).classList.add("failure");
+        } else {
+            document.getElementBvyId(labelId).classList.remove("failure");
+        }
     }
 }
