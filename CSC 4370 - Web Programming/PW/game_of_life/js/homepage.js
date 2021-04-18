@@ -15,6 +15,7 @@ function populateLogin() {
     var message = getCookie("message");
     var status = getCookie("status");
     var func = getCookie("func");
+    
     if(username  == "") {
         return
     }

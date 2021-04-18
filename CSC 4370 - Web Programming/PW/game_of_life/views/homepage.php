@@ -7,7 +7,7 @@
   <title> Game Of Life </title>
 </head>
 
-<body>
+<body onload="populateLogin()">
   <h1 id="title"> GAME OF LIFE </h1>
   <div class="box" id="box">
     <div class="form-box login-box">
@@ -25,7 +25,7 @@
         <input type="text" id="newuser" name="newuser" maxlength="16" placeholder="New Username" />
         <input type="password" id="newpswd" name="newpswd" placeholder="New Password" />
         <input type="password" id="retype" name="retype" placeholder="Confirm Password" />
-        <label id="message" name="message"></label>
+        <label id="message2" name="message2"></label>
         <button> SIGN UP </button>
       </form>
     </div>
