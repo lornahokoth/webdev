@@ -268,7 +268,7 @@ td {
 }
 /* Animation */
 
-/* Slide sign to the right */
+/* Slide overlay to the right */
 .box.right-panel-active .login-box {
   transform: translateX(100%);
 }
