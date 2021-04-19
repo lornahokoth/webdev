@@ -69,6 +69,14 @@
                     <label for="pop">Population: </label>
                     <label id="pop" name="pop" class="stats"></label>
                 </div>
+                <div class="row">
+                    <label for="alive" class="legend alive"></label>
+                    <label id="alive" name="alive">&nbsp;- Alive</label>
+                </div>
+                <div class="row">
+                    <label for="dead" class="legend dead"></label>
+                    <label id="dead" name="dead">&nbsp;- Dead</label>
+                </div>
             </fieldset>
             <fieldset id="menu">
                 <legend>

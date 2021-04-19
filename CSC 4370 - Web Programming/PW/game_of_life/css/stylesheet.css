@@ -133,6 +133,11 @@ legend {
   background-color: #120078;
 }
 
+.legend {
+  height: 20px;
+  width: 20px;
+}
+
 .gamearea {
   background: white;
   border-radius: 10px;

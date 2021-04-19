@@ -86,11 +86,15 @@ function checkGens() {
 }
 
 function checkTableSize(element) {
+    maxValue = 40;
+    if(element == "rows") {
+        maxValue = 24;
+    }
     ele = document.getElementById(element);
     if (ele.value < 5) {
         ele.value = 5;
-    } else if (ele.value > 40) {
-        ele.value = 40;
+    } else if (ele.value > maxValue) {
+        ele.value = maxValue;
     }
     rows = document.getElementById("rows").value;
     cols = document.getElementById("cols").value;
