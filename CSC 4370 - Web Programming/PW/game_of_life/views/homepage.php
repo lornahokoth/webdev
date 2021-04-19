@@ -14,8 +14,24 @@
       <div class="form-box login-box">
         <form action="../controllers/login.php?func=login" method="POST">
           <h1 class="heading homepageH colorFontHomepage"> Log In </h1>
-          <input type="text" id="username" name="username" maxlength="16" placeholder="Username" />
-          <input type="password" id="pswd" name="pswd" placeholder="Password" />
+          <div class="loginRow">
+            <div class="buffCol">
+              <img src="../asset/outline_person_black_24dp.png" alt="user icon"/>
+            </div>
+            <div class="loginCol">
+              <input type="text" id="username" name="username" maxlength="16" placeholder="Username" />
+            </div>
+            <div class="buffCol"></div>
+          </div>
+          <div class="loginRow">
+            <div class="buffCol">
+              <img src="../asset/outline_lock_black_24dp.png" alt="user icon"/>
+            </div>
+            <div class="loginCol">
+              <input type="password" id="pswd" name="pswd" placeholder="Password" />
+            </div>
+            <div class="buffCol"></div>
+          </div>
           <label id="loginMessage" name="loginMessage"></label>
           <button class="bgColorHomepage"> LOG IN </button>
         </form>

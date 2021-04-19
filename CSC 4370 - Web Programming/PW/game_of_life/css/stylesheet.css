@@ -359,3 +359,13 @@ legend {
 .buffcol {
  flex: 1;  
 }
+
+.loginRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.loginCol {
+  flex: 7;
+}
