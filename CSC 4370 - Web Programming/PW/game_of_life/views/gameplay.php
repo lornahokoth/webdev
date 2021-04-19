@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="leftCol">
                         <label for="rows">Num Rows: </label>
-                        <input type="number" class="numInput" id="rows" name="rows" min="5" max="40" onchange="checkTableSize('rows')">
+                        <input type="number" class="numInput" id="rows" name="rows" min="5" max="24" onchange="checkTableSize('rows')">
                     </div>
                     <div class="middleCol">
                         <label for="patterns">Patterns: </label>
