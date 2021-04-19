@@ -16,7 +16,7 @@ function populateLogin() {
     var status = getCookie("status");
     var func = getCookie("func");
    
-    if(username == "") {
+    if(func == "") {
         return;
     }
 
@@ -38,10 +38,5 @@ function populateLogin() {
 
         document.getElementById(labelId).innerHTML = message;
         document.getElementById(userId).value = username;
-        if(status == "failure") {
-            document.getElementById(labelId).classList.add("failure");
-        } else {
-            document.getElementBvyId(labelId).classList.remove("failure");
-        }
     }
 }
