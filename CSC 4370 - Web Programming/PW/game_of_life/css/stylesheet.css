@@ -197,7 +197,7 @@ legend {
 }
 
 #user{
-  margin: 0;
+  margin: 15px 0 10px;
 }
 
 #welcome{
@@ -213,6 +213,21 @@ legend {
   height: 150px;
   margin-top: 4%;
 }
+.lableSpace label {
+  margin: 0 0 7px;
+}
+.content p {
+  font-size: 9pt;
+}
+.content a {
+  text-decoration: none;
+  color: #fd3a69;
+}
+
+.buttons{
+  margin: 20px 0 20px;
+}
+
 .buttonanimated {
   animation: moveInButton 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
@@ -413,6 +428,8 @@ legend {
 .popup .close:hover {
   color: red;
 }
+
+
 /* Animation */
 
 /* Slide overlay to the right */

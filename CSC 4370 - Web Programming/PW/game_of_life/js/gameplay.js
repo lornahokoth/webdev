@@ -5,7 +5,7 @@ var numGens;
 var population;
 const timer = ms => new Promise(res => setTimeout(res, ms));
 
-function loadGameplay(rows = 15, cols = 20) {
+function loadGameplay(rows = 17, cols = 21) {
     var username = getCookie("username");
     var status = getCookie("status");
     if(username == "" || status == "failure") {
