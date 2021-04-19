@@ -23,6 +23,7 @@ function populateLogin() {
     if(username != "" && func == "login" && status == "success") {
         document.getElementById("loginDisplay").classList.add("hidden");
         document.getElementById("playDisplay").classList.remove("hidden");
+        document.getElementById("user").innerHTML = "Welcome, &nbsp;" + username.toUpperCase();
     } else {
         document.getElementById("loginDisplay").classList.remove("hidden");
         document.getElementById("playDisplay").classList.add("hidden");

@@ -21,20 +21,14 @@
   -webkit-text-fill-color: transparent;
 }
 
-#play {
-  
+.row {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
 }
 
-#rules {
-
-}
-
-#credits {
-
-}
-
-#logout {
-  
+.heading {
+  font-family: "headerFont";
 }
 
 body {
@@ -87,10 +81,6 @@ button.ghost:hover {
 button:disabled {
   background-color: grey;
   border: 1px solid grey;
-}
-
-.heading {
-  font-family: "headerFont";
 }
 
 /* Gameplay Design */
@@ -165,12 +155,6 @@ td {
   top: 0;
 }
 
-.row {
-  display: flex;
-  align-items: center;
-  padding-bottom: 5px;
-}
-
 .leftCol {
   flex: 2;
   text-align: right;
@@ -186,6 +170,18 @@ td {
 }
 
 /* Homepage Design */
+
+#welcome{
+  height: 50%;
+  text-align: center;
+  color: #9d0191;
+  font-size: 21pt;
+}
+.homepageButton {
+  font-size: 12pt;
+  width: 12rem;
+}
+
 .failure {
   color: red;
 }
@@ -341,4 +337,11 @@ td {
 
 .box.right-panel-active .overlayRight {
   transform: translateX(20%);
+}
+.col {
+  flex: 2;
+  text-align: center;
+}
+.buffcol {
+ flex: 1;  
 }

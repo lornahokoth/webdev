@@ -47,22 +47,29 @@
         </div>
       </div>
     </div>
+    <div id="welcome">
+      <h1 id="user"></h1>
+    </div>
     <div id="playDisplay" class="hidden">
       <div class="row">
+        <div class="buffcol"></div>
         <div class="col">
-          <button id="play"> Play </button>
+          <a href="./gameplay.php"><button id="play" class="homepageButton"> PLAY </button></a>
         </div>
         <div class="col">
-          <button id="rules"> Rules </button>
+          <button id="rules" class="homepageButton"> RULES </button>
         </div>
+        <div class="buffcol"></div>
       </div>
       <div class="row">
+        <div class="buffcol"></div>
         <div class="col">
-          <button id="credits"> Credits </button>
+          <button id="credits" class="homepageButton"> CREDITS </button>
         </div>
         <div class="col">
-          <button id="logout"> Log Out </button>
+          <a href="../controllers/login.php?func=logout"><button id="logout" class="homepageButton"> LOG OUT </button></a>
         </div>
+        <div class="buffcol"></div>
       </div>
 
 
