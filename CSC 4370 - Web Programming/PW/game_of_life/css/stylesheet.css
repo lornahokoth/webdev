@@ -185,6 +185,21 @@ legend {
 
 /* Homepage Design */
 
+@keyframes moveInButton {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+#user{
+  margin: 0;
+}
+
 #welcome{
   height: 60%;
   text-align: center;
@@ -196,6 +211,11 @@ legend {
   border-radius: 50%;
   width: 150px;
   height: 150px;
+  margin-top: 4%;
+}
+.buttonanimated {
+  animation: moveInButton 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
 }
 .homepageButton {
   font-size: 12pt;
@@ -329,6 +349,69 @@ legend {
   border: 1px solid #9d0191;
 }
 
+.col {
+  flex: 2;
+  text-align: center;
+}
+
+.buffcol {
+ flex: 1;  
+}
+
+.loginRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.loginCol {
+  flex: 7;
+}
+.overlayRules{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlayRules:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+.popup .close{
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: red;
+}
 /* Animation */
 
 /* Slide overlay to the right */
@@ -359,20 +442,4 @@ legend {
 .box.right-panel-active .overlayRight {
   transform: translateX(20%);
 }
-.col {
-  flex: 2;
-  text-align: center;
-}
-.buffcol {
- flex: 1;  
-}
 
-.loginRow {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.loginCol {
-  flex: 7;
-}

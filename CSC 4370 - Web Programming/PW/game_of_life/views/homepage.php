@@ -88,32 +88,48 @@
       </div>
     </div>
     <div id="welcome">
-      <h1 id="user"></h1>
       <div>
         <img id="imageIcon" src="../images/gol.png" alt="gol icon">
       </div>
+      <h1 id="user"></h1>
     </div>
-
     <div id="playDisplay" class="hidden">
       <div class="row">
         <div class="buffcol"></div>
         <div class="col">
-          <a href="./gameplay.php"><button id="play" class="homepageButton"> PLAY </button></a>
+          <a href="./gameplay.php"><button id="play" class="homepageButton buttonanimated"> PLAY </button></a>
         </div>
         <div class="col">
-          <button id="rules" class="homepageButton"> RULES </button>
+          <a href="#popup"><button id="rules" class="homepageButton buttonanimated"> RULES </button></a>
         </div>
         <div class="buffcol"></div>
       </div>
       <div class="row">
         <div class="buffcol"></div>
         <div class="col">
-          <button id="credits" class="homepageButton"> CREDITS </button>
+          <button id="credits" class="homepageButton buttonanimated"> CREDITS </button>
         </div>
         <div class="col">
-          <a href="../controllers/login.php?func=logout"><button id="logout" class="homepageButton"> LOG OUT </button></a>
+          <a href="../controllers/login.php?func=logout"><button id="logout" class="homepageButton buttonanimated"> LOG OUT </button></a>
         </div>
         <div class="buffcol"></div>
+        <div id="popup" class="overlayRules">
+          <div class="popup">
+            <h2> How To Play</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+              1. Any live cell with fewer than two live neighbors dies, which is caused by under population.
+              2. Any live cell with more than three live neighbors dies, as if by overcrowding.
+              3. Any live cell with two or three live neighbors’ lives on to the next generation.
+              4. Any dead cell with exactly three live neighbors becomes a live cell.
+              5. If a dead cell has exactly three live neighbors, it comes to
+              6. If a live cell has less than two live neighbors, it dies
+              7. If a live cell has more than three live neighbors, it dies
+              8. If a live cell has two or three live neighbors, it continues living. life - Therefore by repeating the
+              cycle over and over, these simple rules create interesting, often unpredictable patterns.
+            </div>
+          </div>
+        </div>
       </div>
 
 
