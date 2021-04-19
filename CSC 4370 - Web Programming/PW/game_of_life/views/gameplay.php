@@ -37,8 +37,8 @@
                         </select>
                     </div>
                     <div class="rightCol">
-                        <button id="startBtn" onclick="startGame()">Start</button>
-                        <button id="resetBtn" onclick="resetGame()" class="hidden">Reset</button>
+                        <button id="startBtn" onclick="startGame()" class="gameplayButton">Start</button>
+                        <button id="resetBtn" onclick="resetGame()" class="hidden gameplayButton">Reset</button>
                     </div>
                 </div>
                 <div class="row">
@@ -50,10 +50,10 @@
                         <label>Increment:</label>
                         <input type="range" min="1" max="23" value="1" class="slider"  id="numGenerations" oninput="updateGens()">
                         <input type="number" class="numInput" id="numGens" name="numGens" min="1" max="23" onchange="checkGens()">
-                        <button id="generate" onclick="generate()">Generate</button>
+                        <button id="generate" onclick="generate()" class="gameplayButton">Generate</button>
                     </div>
                     <div class="rightCol">
-                        <button id="stopBtn" onclick="stop()">Stop</button>
+                        <button id="stopBtn" onclick="stop()" class="gameplayButton">Stop</button>
                     </div>
                 </div>
             </fieldset>
@@ -61,21 +61,24 @@
                 <legend>
                     Game Stats
                 </legend>
-                <label for="gen">Generation: </label>
-                <label id="gen" name="gen"></label>
-                <br>
-                <label for="pop">Population: </label>
-                <label id="pop" name="pop"></label>
+                <div class="row">
+                    <label for="gen">Generation: </label>
+                    <label id="gen" name="gen" class="stats"></label>
+                </div>
+                <div class="row">
+                    <label for="pop">Population: </label>
+                    <label id="pop" name="pop" class="stats"></label>
+                </div>
             </fieldset>
             <fieldset id="menu">
                 <legend>
                     Menu
                 </legend>
                 <div class="row">
-                    <a href="./homepage.php"><button>Quit</button></a>
+                    <a href="./homepage.php"><button class="gameplayButton">Quit</button></a>
                 </div>
                 <div class="row">
-                    <a href="../controllers/login.php?func=logout"><button>Log Out</button></a>
+                    <a href="../controllers/login.php?func=logout"><button class="gameplayButton">Log Out</button></a>
                 </div>
             </fieldset>
         </div>
