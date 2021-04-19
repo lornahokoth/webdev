@@ -32,7 +32,7 @@
             </div>
             <div class="buffCol"></div>
           </div>
-          <label  id="loginMessage" name="loginMessage"></label>
+          <label id="loginMessage" name="loginMessage"></label>
           <button class="bgColorHomepage"> LOG IN </button>
         </form>
       </div>

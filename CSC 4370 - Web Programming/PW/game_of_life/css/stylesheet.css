@@ -34,13 +34,13 @@
 body {
   font-family: "commonFont";
   background: #ebebeb;
+  background-image: url(../images/cells.png);
   color: #fd3a69;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: -20px 0 50px;
+  height: 98vh;
 }
 
 button {
@@ -213,6 +213,7 @@ legend {
   height: 150px;
   margin-top: 4%;
 }
+
 .lableSpace label {
   margin: 0 0 7px;
 }
