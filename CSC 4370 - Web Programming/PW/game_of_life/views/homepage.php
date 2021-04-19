@@ -16,7 +16,7 @@
           <h1 class="heading homepageH colorFontHomepage"> Log In </h1>
           <div class="loginRow">
             <div class="buffCol">
-              <img src="../asset/outline_person_black_24dp.png" alt="user icon"/>
+              <img src="../images/outline_person_black_24dp.png" alt="user icon" />
             </div>
             <div class="loginCol">
               <input type="text" id="username" name="username" maxlength="16" placeholder="Username" />
@@ -25,7 +25,7 @@
           </div>
           <div class="loginRow">
             <div class="buffCol">
-              <img src="../asset/outline_lock_black_24dp.png" alt="user icon"/>
+              <img src="../images/outline_lock_black_24dp.png" alt="user icon" />
             </div>
             <div class="loginCol">
               <input type="password" id="pswd" name="pswd" placeholder="Password" />
@@ -41,7 +41,7 @@
           <h1 class="heading homepageH"> Sign Up</h1>
           <div class="loginRow">
             <div class="buffCol">
-              <img src="../asset/outline_person_black_24dp.png" alt="user icon"/>
+              <img src="../images/outline_person_black_24dp.png" alt="user icon" />
             </div>
             <div class="loginCol">
               <input type="text" id="newuser" name="newuser" maxlength="16" placeholder="New Username" />
@@ -50,7 +50,7 @@
           </div>
           <div class="loginRow">
             <div class="buffCol">
-              <img src="../asset/outline_lock_black_24dp.png" alt="user icon"/>
+              <img src="../images/outline_lock_black_24dp.png" alt="user icon" />
             </div>
             <div class="loginCol">
               <input type="password" id="newpswd" name="newpswd" placeholder="New Password" />
@@ -59,7 +59,7 @@
           </div>
           <div class="loginRow">
             <div class="buffCol">
-              <img src="../asset/outline_lock_black_24dp.png" alt="user icon"/>
+              <img src="../images/outline_lock_black_24dp.png" alt="user icon" />
             </div>
             <div class="loginCol">
               <input type="password" id="retype" name="retype" placeholder="Confirm Password" />
@@ -89,7 +89,11 @@
     </div>
     <div id="welcome">
       <h1 id="user"></h1>
+      <div>
+        <img id="imageIcon" src="../images/gol.png" alt="gol icon">
+      </div>
     </div>
+
     <div id="playDisplay" class="hidden">
       <div class="row">
         <div class="buffcol"></div>

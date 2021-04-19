@@ -186,10 +186,16 @@ legend {
 /* Homepage Design */
 
 #welcome{
-  height: 50%;
+  height: 60%;
   text-align: center;
   color: #9d0191;
   font-size: 21pt;
+}
+
+#imageIcon {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
 }
 .homepageButton {
   font-size: 12pt;
@@ -322,6 +328,7 @@ legend {
   background: #9d0191;
   border: 1px solid #9d0191;
 }
+
 /* Animation */
 
 /* Slide overlay to the right */
