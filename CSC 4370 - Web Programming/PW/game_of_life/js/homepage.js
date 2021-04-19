@@ -2,6 +2,7 @@ const signUpButton = document.getElementById("signUp");
 const loginButton = document.getElementById("signIn");
 const box = document.getElementById('box');
 
+//adding onclick events to signUp and login buttons to perform animations
 signUpButton.addEventListener('click', () => {
     box.classList.add("right-panel-active");
 });
@@ -10,6 +11,7 @@ loginButton.addEventListener('click', () => {
     box.classList.remove("right-panel-active");
 });
 
+//Function run to load username and messages if needed
 function populateLogin() {
     var username = getCookie("username");
     var message = getCookie("message");

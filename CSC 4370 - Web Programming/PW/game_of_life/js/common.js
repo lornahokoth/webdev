@@ -1,3 +1,5 @@
+//getCookie is a common function that can be used in any JS to get the value of
+//a specific cookie
 function getCookie(cookie) {
     var name = cookie + "=";
     var decodedCookie = decodeURIComponent(document.cookie.replace(/\+/g, ' '));
