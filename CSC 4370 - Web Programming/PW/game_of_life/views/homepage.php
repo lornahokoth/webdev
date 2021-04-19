@@ -39,9 +39,33 @@
       <div class="form-box signUp-box">
         <form action="../controllers/login.php?func=register" method="POST">
           <h1 class="heading homepageH"> Sign Up</h1>
-          <input type="text" id="newuser" name="newuser" maxlength="16" placeholder="New Username" />
-          <input type="password" id="newpswd" name="newpswd" placeholder="New Password" />
-          <input type="password" id="retype" name="retype" placeholder="Confirm Password" />
+          <div class="loginRow">
+            <div class="buffCol">
+              <img src="../asset/outline_person_black_24dp.png" alt="user icon"/>
+            </div>
+            <div class="loginCol">
+              <input type="text" id="newuser" name="newuser" maxlength="16" placeholder="New Username" />
+            </div>
+            <div class="buffCol"></div>
+          </div>
+          <div class="loginRow">
+            <div class="buffCol">
+              <img src="../asset/outline_lock_black_24dp.png" alt="user icon"/>
+            </div>
+            <div class="loginCol">
+              <input type="password" id="newpswd" name="newpswd" placeholder="New Password" />
+            </div>
+            <div class="buffCol"></div>
+          </div>
+          <div class="loginRow">
+            <div class="buffCol">
+              <img src="../asset/outline_lock_black_24dp.png" alt="user icon"/>
+            </div>
+            <div class="loginCol">
+              <input type="password" id="retype" name="retype" placeholder="Confirm Password" />
+            </div>
+            <div class="buffCol"></div>
+          </div>
           <label id="registerMessage" name="registerMessage"></label>
           <button> SIGN UP </button>
         </form>
