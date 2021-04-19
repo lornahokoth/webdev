@@ -35,6 +35,7 @@ function loadGameplay(rows = 17, cols = 21) {
     document.getElementById("pop").innerHTML = population;
     document.getElementById("numGenerations").setAttribute("disabled", false);
     document.getElementById("generate").setAttribute("disabled", false);
+    document.getElementById("numGens").setAttribute("disabled", false);
     document.getElementById("rows").removeAttribute("disabled");
     document.getElementById("cols").removeAttribute("disabled");
     document.getElementById("patterns").removeAttribute("disabled");
@@ -167,6 +168,7 @@ function startGame() {
     //enables/disables the game functions.
     document.getElementById("numGenerations").removeAttribute("disabled");
     document.getElementById("generate").removeAttribute("disabled");
+    document.getElementById("numGens").removeAttribute("disabled");
     document.getElementById("rows").setAttribute("disabled", false);
     document.getElementById("cols").setAttribute("disabled", false);
     document.getElementById("patterns").setAttribute("disabled", false);
@@ -433,7 +435,7 @@ function displayTable() {
             }
         }
     }
-    
+
     document.getElementById("gen").innerHTML = numGens;
     document.getElementById("pop").innerHTML = population;
 }
