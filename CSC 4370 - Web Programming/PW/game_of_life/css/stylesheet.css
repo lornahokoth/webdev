@@ -13,12 +13,28 @@
   src: url(../asset/OpenSans-Regular.ttf);
 }
 #title {
-    font-family: "titleFont";
-    color: #120078;
-    font-size: 72px;
-    background: -webkit-linear-gradient(#fecd1a, #fd3a69, #9d0191, #120078);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-family: "titleFont";
+  color: #120078;
+  font-size: 72px;
+  background: -webkit-linear-gradient(#fecd1a, #fd3a69, #9d0191, #120078);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#play {
+  
+}
+
+#rules {
+
+}
+
+#credits {
+
+}
+
+#logout {
+  
 }
 
 body {
@@ -44,6 +60,7 @@ button {
   padding: 12px 45px;
   letter-spacing: 1px;
   transition: 80ms ease-in;
+  min-width: 145px;
 }
 button:hover {
   background: #fecd1a;
@@ -73,10 +90,10 @@ button:disabled {
 }
 
 .heading {
-    font-family: "headerFont";
-  }
+  font-family: "headerFont";
+}
 
-  /* Gameplay Design */
+/* Gameplay Design */
 
 #golTable {
   border-collapse: collapse;
@@ -94,7 +111,7 @@ td {
   width: 25px;
   height: 25px;
   border: black 2px solid;
-}  
+}
 
 .hidden {
   display: none;
@@ -141,9 +158,9 @@ td {
 
 /* Homepage Design */
 .failure {
-    color: red;
-  }
-  
+  color: red;
+}
+
 .homepageH {
   font-weight: bold;
   margin: 0;
