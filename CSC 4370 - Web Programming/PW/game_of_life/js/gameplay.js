@@ -6,9 +6,9 @@ var population;
 const timer = ms => new Promise(res => setTimeout(res, ms));
 
 function loadGameplay(rows = 15, cols = 20) {
-    label = document.getElementById("numGens");
+    input = document.getElementById("numGens");
     slider = document.getElementById("numGenerations");
-    label.innerHTML = slider.value;
+    input.value = slider.value;
     row = document.getElementById("rows");
     col = document.getElementById("cols");
     row.value = rows;
@@ -64,9 +64,20 @@ function buildArrays(rows, cols) {
 }
 
 function updateGens() {
-    label = document.getElementById("numGens");
+    input = document.getElementById("numGens");
     slider = document.getElementById("numGenerations");
-    label.innerHTML = slider.value;
+    input.value = slider.value;
+}
+
+function checkGens() {
+    input = document.getElementById("numGens");
+    slider = document.getElementById("numGenerations");
+    if(input.value > 23) {
+        input.value = 23;
+    } else if (input.value < 1) {
+        input.value = 1;
+    }
+    slider.value = input.value;
 }
 
 function checkTableSize(element) {
@@ -260,13 +271,13 @@ function populateArray(arr) {
     return arr;
 }
 
-// function disableScreen() {
-//     document.getElementById("gameOverlay").classList.add("gameplayOverlay");
-// }
+function disableScreen() {
+    document.getElementById("gameOverlay").classList.add("gameplayOverlay");
+}
 
-// function enableScreen() {
-//     document.getElementById("gameOverlay").classList.remove("gameplayOverlay");
-// }
+function enableScreen() {
+    document.getElementById("gameOverlay").classList.remove("gameplayOverlay");
+}
 
 async function generate() {
     currentGen = populateArray(currentGen);
@@ -276,7 +287,7 @@ async function generate() {
     numSteps = document.getElementById("numGenerations").value;
     rows = document.getElementById("rows").value;
     cols = document.getElementById("cols").value;
-    // disableScreen();
+    disableScreen();
     for (step = 1; step <= numSteps; step++) {
         for (i = 0; i < rows; i++) {
             for (j = 0; j < cols; j++) {
@@ -314,7 +325,7 @@ async function generate() {
         await timer(500);
         displayTable();
     }
-    // enableScreen();
+    enableScreen();
 }
 
 function displayTable() {
@@ -343,14 +354,14 @@ function resetGame() {
     numGens = 1;
     
     document.getElementById("numGenerations").value = 1;
-    document.getElementById("numGens").innerHTML = 1;
+    document.getElementById("numGens").value = 1;
     
     displayTable();
 }
 
 function stop() {
     document.getElementById("numGenerations").value = 1;
-    document.getElementById("numGens").innerHTML = 1;
+    document.getElementById("numGens").value = 1;
     
     start = document.getElementById("startBtn");
     reset = document.getElementById("resetBtn");

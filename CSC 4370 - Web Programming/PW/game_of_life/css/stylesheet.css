@@ -100,17 +100,26 @@ button:disabled {
 }
 
 #options {
-  flex: 2;
+  flex: 7;
 }
 
 #stats {
+  flex: 2;
+}
+
+#menu {
   flex: 1;
+  text-align: center;
 }
 
 td {
   width: 25px;
   height: 25px;
   border: black 2px solid;
+}
+
+.numInput {
+  width: 3em;
 }
 
 .hidden {
@@ -154,6 +163,26 @@ td {
   position: fixed;
   right: 0;
   top: 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.leftCol {
+  flex: 2;
+  text-align: right;
+}
+
+.middleCol {
+  padding-left: 5px;
+  flex: 6;
+}
+
+.rightCol {
+  flex: 1;
 }
 
 /* Homepage Design */
