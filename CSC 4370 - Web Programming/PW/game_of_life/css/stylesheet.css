@@ -387,14 +387,15 @@ legend {
 .popup {
   margin: 70px auto;
   padding: 20px;
-  background: white;
+  background: #120078;
   border-radius: 5px;
   width: 30%;
   position: relative;
+  color: #fecd1a
 }
 
 .popup .content {
-  max-height: 30%;
+  max-height: 40%;
   overflow: auto;
 }
 
@@ -406,7 +407,7 @@ legend {
   font-size: 30px;
   font-weight: bolder;
   text-decoration: none;
-  color: #333;
+  color: #9d0191;
 }
 
 .popup .close:hover {

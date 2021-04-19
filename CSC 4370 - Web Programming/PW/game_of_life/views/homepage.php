@@ -118,15 +118,33 @@
             <h2> How To Play</h2>
             <a class="close" href="#">&times;</a>
             <div class="content">
-              1. Any live cell with fewer than two live neighbors dies, which is caused by under population.
-              2. Any live cell with more than three live neighbors dies, as if by overcrowding.
-              3. Any live cell with two or three live neighbors’ lives on to the next generation.
-              4. Any dead cell with exactly three live neighbors becomes a live cell.
-              5. If a dead cell has exactly three live neighbors, it comes to
-              6. If a live cell has less than two live neighbors, it dies
-              7. If a live cell has more than three live neighbors, it dies
-              8. If a live cell has two or three live neighbors, it continues living. life - Therefore by repeating the
-              cycle over and over, these simple rules create interesting, often unpredictable patterns.
+              <ul>
+                <li>
+                  Any live cell with fewer than two live neighbors dies, which is caused by under population.    
+                </li>
+                <li>
+                  Any live cell with more than three live neighbors dies, as if by overcrowding.
+                </li>
+                <li>
+                  Any live cell with two or three live neighbors’ lives on to the next generation.
+                </li>
+                <li>
+                  Any dead cell with exactly three live neighbors becomes a live cell.
+                </li>
+                <li>
+                  If a dead cell has exactly three live neighbors, it comes to
+                </li>
+                <li>
+                  If a live cell has less than two live neighbors, it dies
+                </li>
+                <li>
+                  If a live cell has more than three live neighbors, it dies
+                </li>
+                <li>
+                  If a live cell has two or three live neighbors, it continues living. life - Therefore by repeating the
+                  cycle over and over, these simple rules create interesting, often unpredictable patterns.
+                </li>
+              </ol>
             </div>
           </div>
         </div>
