@@ -97,6 +97,8 @@ function login() {
     setcookie("func", "login", 0, "/");
 
     if(empty($_POST['username']) || empty($_POST['pswd'])) {
+        setcookie("status", "failure", 0, "/");
+        setcookie("message", "No Login Provided.", 0, "/");
         header("Location: ../views/homepage.php");
         return;
     }
