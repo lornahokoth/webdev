@@ -108,6 +108,15 @@ td {
   border: black 2px solid;
 }
 
+legend {
+  font-weight: bold;
+}
+
+.stats {
+  font-weight: bold;
+  padding-left: 5px;
+}
+
 .numInput {
   width: 3em;
 }
@@ -161,12 +170,17 @@ td {
 }
 
 .middleCol {
-  padding-left: 5px;
+  margin-left: 5px;
   flex: 6;
 }
 
 .rightCol {
   flex: 1;
+}
+
+.gameplayButton {
+  background-color: #9d0191;
+  border-color: #9d0191;
 }
 
 /* Homepage Design */

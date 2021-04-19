@@ -6,6 +6,11 @@ var population;
 const timer = ms => new Promise(res => setTimeout(res, ms));
 
 function loadGameplay(rows = 15, cols = 20) {
+    var username = getCookie("username");
+    var status = getCookie("status");
+    if(username == "" || status == "failure") {
+        window.location.href = "../views/homepage.php";
+    }
     input = document.getElementById("numGens");
     slider = document.getElementById("numGenerations");
     input.value = slider.value;
