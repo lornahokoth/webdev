@@ -75,10 +75,14 @@
                     Menu
                 </legend>
                 <div class="row">
-                    <a href="./homepage.php"><button class="gameplayButton">Quit</button></a>
+                    <a href="./homepage.php">
+                    <button class="gameplayButton">Quit</button>
+                </a>
                 </div>
                 <div class="row">
-                    <a href="../controllers/login.php?func=logout"><button class="gameplayButton">Log Out</button></a>
+                    <a href="../controllers/login.php?func=logout">
+                    <button class="gameplayButton">Log Out</button>
+                </a>
                 </div>
             </fieldset>
         </div>

@@ -97,7 +97,9 @@
       <div class="row">
         <div class="buffcol"></div>
         <div class="col">
-          <a href="./gameplay.php"><button id="play" class="homepageButton buttonanimated"> PLAY </button></a>
+          <a href="./gameplay.php">
+            <button id="play" class="homepageButton buttonanimated"> PLAY </button>
+          </a>
         </div>
         <div class="col">
           <a href="#popup"><button id="rules" class="homepageButton buttonanimated"> RULES </button></a>
@@ -110,7 +112,9 @@
           <button id="credits" class="homepageButton buttonanimated"> CREDITS </button>
         </div>
         <div class="col">
-          <a href="../controllers/login.php?func=logout"><button id="logout" class="homepageButton buttonanimated"> LOG OUT </button></a>
+          <a href="../controllers/login.php?func=logout">
+            <button id="logout" class="homepageButton buttonanimated"> LOG OUT </button>
+          </a>
         </div>
         <div class="buffcol"></div>
         <div id="popup" class="overlayRules">
