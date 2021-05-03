@@ -178,3 +178,13 @@ $(function(){
   });
 });
 
+function setStoragePStand(){
+  localStorage.setItem("name", "standard");
+  localStorage.setItem("prices", "$7");
+  location.replace("cart.php")
+}
+function setStoragePVIP(){
+  localStorage.setItem("namev", "vip");
+  localStorage.setItem("pricesv", "$15");
+  location.replace("cart.php")
+}

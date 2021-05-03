@@ -1,15 +1,20 @@
 <!DOCTYPE html>
     <head>
         <title>
-            Parking and Flight Bookings
+            M&M | Parking
         </title>
 
         <link rel="stylesheet" href="../css/style.css">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     </head>
     <body class="parkB">
         <header>
-            <h1 class="logo"><a href="">Ecommerce Site Name</a></h1>
-            <h1 class="cart"><a href="./cart.php">Cart</a></h1>
+            <h1 class="logo"><a href="./index.html">miles&miles</a></h1>
+            <h1 class="cart">
+                <a href="./cart.php">
+                    <ion-icon name="basket"></ion-icon>
+                </a>
+            </h1>
             <nav>
                 <ul>
                     <li class=""><a href="./index.html">Home</a></li>
@@ -29,6 +34,23 @@
                     <p class="parkP" style="font-size: 1.5em;">We offer standard parking at $7 and VIP parking at $15. VIP includes larger spaces for your vehicle and is more accessible to exits. </p>
                 </center>
             </div>
+
+            <div class="topP">
+                <label class="parkP" style="font-size: 2em; margin-right: 335px;">Standard</label>
+                <label class="parkP" style="font-size: 2em; margin-right: 450px;">$7</label>
+                <button class="buttonP" onclick="setStoragePStand();" type='submit' id='standard'>Add to cart</button>
+            </div>
+            <div class="botP">
+                <label class="parkP" style="font-size: 2em; margin-right: 400px;">VIP</label>
+                <label class="parkP" style="font-size: 2em; margin-right: 450px; ">$15</label>
+                <button class="buttonP" onclick="setStoragePVIP();" type='submit' id='vip'>Add to cart</button>
+            </div>
+
+
+
+
+            <!-- unused html for ticket selection that would work with the database 
+                
             <div class="left">
                 <div class="left">
                 <p class="parkP">Select the amount of tickets you are purchasing: </p>
@@ -69,11 +91,11 @@
                     <br>
                     <button class="buttonP" type='submit' name='add'><a style="color: #37474f;"href="./checkout.html">Checkout</a></button>
                 </form>
-            </div>
+            </div> -->
         </div>
         
         
-
+        <script src = "https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
         <script src = "../js/script.js"></script>
     </body>
 </html>

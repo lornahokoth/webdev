@@ -2,6 +2,10 @@ IMPORTING ecommercedb.sql
 
 After downloading XAMPP run the following:
 <path_to_xampp_mysql_bin>\mysql -u root e-commercedb < e-commercedb.sql
+Example:
+C:\xampp\mysql\bin\mysqldump.exe -u root e-commercedb < e-commercedb.sql
+
+Make sure you are in the directory where you saved e-commercedb.sql
 
 This sould run all the sql commands in the .sql file and create a new database using data I already created.
 You can verify this using phpMyAdmin or using mysql from the Windows commandline.

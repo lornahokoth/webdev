@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SignUp and Login</title>
+	<title>M&M</title>
 	<link rel="stylesheet" type="text/css" href="../css/lstyle.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -19,8 +19,8 @@ $cookie = 0;
 
  <form method = "post" action = "register.php">
 	<h1>Register</h1>
-	 <input type="text" name="fname" placeholder="First Name">
-	 <input type="text" name="lname" placeholder="Last Name">
+	 <input type="text" name="fname" class="namesimg" placeholder="First Name">
+	 <input type="text" name="lname" placeholder="Last Name" class="namesimg">
 	 <input type="text" id="personimg" name="username" placeholder="Username">
 	<input type="password" class="passimg" name="password" id="password" placeholder="Password">
 	<input type="email"  class="emailimg" name="email" placeholder="Email">

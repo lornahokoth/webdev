@@ -28,8 +28,8 @@
         			<span class="disclaimer">This card is not real.</span>
       			</div>
     		</div>
-  		
-       
+
+
     <label>Card Number</label>
     <input class="number" type="text" name="cardnum" ng-model="ncard" maxlength="19" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
     <label>Cardholder Name</label>
@@ -39,7 +39,7 @@
     <label>Security Number</label>
     <input class="ccv" type="text" name="cvv" placeholder="CVV" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
   </div>
-   
+
     <div class="col2">
     <label> Address</label>
     <input type="text" name="address">
@@ -49,16 +49,23 @@
      <input type="text" name="zipcode">
     <label>Country</label>
     <input type="text" name="country">
-     
+
     <label>Phone Number</label>
     <input type="text" name="pnumber">
-<div id="subbutton">
-    <button class="buy">Pay</button>
-</div>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<div id="subbutton">
+    	<button class = "buy" onclick="js()">PAY NOW</button>
+		</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../js/script.js"></script>
+		<script>
+			function js() {
+				localStorage.clear();
+  			alert("Your paymanet has now been processed. You will be redirected to the homepage soon. If you have errors within the below information, your payment WILL NOT be procesed.");
+				window.location.href = "index.html";
+				localStorage.clear();
+			}
+		</script>
   </div>
-  
 </div>
 </body>
 </html>

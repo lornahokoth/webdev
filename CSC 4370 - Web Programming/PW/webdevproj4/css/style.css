@@ -38,6 +38,13 @@ header {
   box-shadow: 0 7px 16px -5px rgba(0,0,0,.3);
 }
 
+.styleButton {
+  border-style: double;
+  padding: 15px;
+  font-size: 15px;
+  background-color: lightblue;
+}
+
 .chooseSeatButton {
   border-style: double;
   padding: 15px;
@@ -48,6 +55,7 @@ header {
 .cart a {
   float: right;
   padding: 0px 10px;
+  padding-top: 5px;
   color: #37474f;
   text-transform: uppercase;
 
@@ -55,10 +63,10 @@ header {
 .logo a {
   float: left;
   padding: 12px 40px;
+  padding-top: 5px;
   border-right: 1px solid #b4b4b4;
   color: #37474f;
-  font-family: "Job Clarendon";
-  text-transform: uppercase;
+  font-family: serif;
   font-size: 20px;
 }
 nav, nav ul {
@@ -76,13 +84,17 @@ nav ul li {
 
 }
 
+table, th, td {
+  border: 1px solid black;
+}
+
 nav ul li a {
   display: block;
   margin: 12px 0 0 45px;
   padding-bottom: 12px;
   color: #37474f;
   font-size: 12px;
-  font-family: Roboto;
+  font-family: sans-serif;
 }
 
 nav ul li a:hover {border-bottom: 3px solid black;}
@@ -110,14 +122,17 @@ h1, a, h2{
   padding: 40px 80px;
 }
 .flights {
+  font-family: sans-serif;
+  color: #37474f;
   display: block;
   width: 90%;
   margin: 390px auto;
   margin-bottom: 100px;
   box-shadow: 0 7px 16px -2px rgba(0,0,0,.3);
-  background: #f5f5f5;
+  background-color: #f5f5f5;
   padding: 12px 40px;
   text-align: center;
+  border-radius: 10px 10px 10px 10px;
 }
 .summary {
   display: block;
@@ -269,50 +284,61 @@ h1, a, h2{
 }
 
 /* parking ticket selection */
-
-.select:after {
-  font: 17px "Consolas", monospace;
-  right: 11px;
-  top: 18px;
-  position: absolute;
-
+.topP {
+ width: 75%;
+ height: 150px;
+ margin: 12px auto;
 }
-
-.select select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-
-  display: block;
-  max-width: 400px;
-  height: 50px;
-  margin: 5px 0px;
-  padding: 0px 24px;
-  font-size: 16px;
-  line-height: 1.75;
-  color: white;
-  background-color: #37474f;
-
+.botP {
+ width: 75%;
+ height: 150px;
+ margin: 12px auto;
 }
 .parkP {
   font-family: sans-serif;
   font-size: 1em;
   font-weight: 100;
   color: #2b4251;
-
+  width: 60%;
 }
+
 .buttonP {
   margin: 30px auto 0 auto;
   width: 170px; height: 50px;
-  background: white;
+  background: #37474f;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 17px;
   border: none;
   border-radius: 5px;
-  color: #37474f;
-  
+  color: white;
+
 }
+
+                /*
+                  css unused for parking selection
+                  .select:after {
+                  font: 17px "Consolas", monospace;
+                  right: 11px;
+                  top: 18px;
+                  position: absolute;
+                }
+                .select select {
+                  -webkit-appearance: none;
+                  -moz-appearance: none;
+                  appearance: none;
+                  display: block;
+                  max-width: 400px;
+                  height: 50px;
+                  margin: 5px 0px;
+                  padding: 0px 24px;
+                  font-size: 16px;
+                  line-height: 1.75;
+                  color: white;
+                  background-color: #37474f;
+                } */
+
+
 /* styling for profile */
 .wrapper {
   display: table-cell;
@@ -345,16 +371,23 @@ h1, a, h2{
   text-align: center;
 }
 /* cart styling */
-
 .shoppingCart {
   display: block;
   width: 75%;
-  height: 750px;
+  height: 490px;
   margin: 250px auto;
+  margin-bottom: 100px;
   box-shadow: 0 7px 16px -2px rgba(0,0,0,.3);
   background-color: #b6d6c9;
   border-radius: 15px 15px 15px 15px;
   padding: 25px 40px;
+  text-align: center;
+  font-family: sans-serif;
+  color: #37474f;
+
+}
+table, td, tr, th{
+  border: 1px solid black;
 }
 
 /* cc validator */
@@ -368,3 +401,35 @@ label .ccT {
   display: inline-block;
   vertical-align: bottom;
 }
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color:#b6d6c9;
+    margin: 150px 175px;
+  
+  box-shadow: 0 7px 16px -2px rgba(0,0,0,.3);
+  background-color: #b6d6c9;
+  border-radius: 15px 15px 15px 15px;
+
+}
+.flex-container > .box {
+    background-color: #C5D7BD;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    /* line-height: 75px; */
+    font-size: 20px;
+}
+.headers {
+  display:block;
+    text-align: center;
+    font-size:28px;
+}
+
+.words{
+  display:block;
+  font-size:25px;
+}
+
+

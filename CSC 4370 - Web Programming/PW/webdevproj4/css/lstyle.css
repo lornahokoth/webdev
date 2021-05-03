@@ -233,6 +233,13 @@ background-image:url("../img/email.png");
 	text-indent:20px;
 	background-position: left;
 }
+
+input.namesimg{
+background-image:url("../img/names.png");
+	background-repeat:no-repeat;
+	text-indent:20px;
+	background-position: left;
+}
 input#phoneimg{
 background-image:url("../img/phone.png");
 	background-repeat:no-repeat;

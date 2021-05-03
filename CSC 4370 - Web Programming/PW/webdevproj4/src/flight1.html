@@ -1,28 +1,31 @@
 <!DOCTYPE html>
     <head>
         <title>
-            Parking and Flight Bookings
+            M&M
         </title>
         <link rel="stylesheet" href="../css/style.css">
     </head>
       <body class="flightB">
         <header>
-            <h1 class="logo"><a href="">Ecommerce Site Name</a></h1>
-            <h1 class="cart"><a href="./cart.php">Cart</a></h1>
+            <h1 class="logo"><a href="">miles&miles</a></h1>
+            <h1 class="cart">
+                <a href="./cart.html">
+                    <ion-icon name="basket"></ion-icon>
+                </a>
+            </h1>
             <nav>
                 <ul>
-                    <li class=""><a href="./index.html">Home</a></li>
-                    <li class="active"><a href="flights.html">Flights</a></li>
-                    <li><a href="./parking.php">Parking</a></li>
-                    <a href="./both.php">Logout</a>
+                    <li class=""><a href="./index.html"><b>Home</b></a></li>
+                    <li class="active"><a href="flights.html"><b>Flights</b></a></li>
+                    <li><a href="./parking.html"><b>Parking</b></a></li>
                   </ul>
             </nav>
         </header>
         <div class="flights">
           <br>
           <br>
+          <u><h1>FLIGHT INFORMATION:</h1></u>
           <center>
-            <u><h2>FLIGHT INFORMATION:</h2></u>
             <h3>One Way Trip | Non-stop</h3>
             <img alt="ATL - JFK" src="../img/1.jpg">
             <h3>Total Flight Time: <u>~2 Hours & 30 Mintues</u></h3>
@@ -30,7 +33,7 @@
             <h3>ARRIVAL: John F. Kennedy International Airport, Queens, New York on <u>April 2, 2021 @ 23:00 EST</u></h3>
             <h2 id="priceGenerator"></h2>
             <br>
-            <b><a href="seating.html" class="chooseSeatButton">CHOOSE YOUR SEAT</a></b>
+            <b><a href="seatings1.html" class="styleButton">CHOOSE YOUR SETS</a></b>
           </center>
           <br>
           <br>
@@ -41,9 +44,12 @@
               min = Math.ceil(min);
               max = Math.floor(max);
               number = Math.floor(Math.random() * (max - min + 1) + min);
-              document.getElementById("priceGenerator").innerHTML = "PRICE: $" + number;
+              document.getElementById("priceGenerator").innerHTML = "PRICE: ~$" + number;
             }
+
+            localStorage.setItem("price", number);
           </script>
+          <script src = "https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
         </div>
     </body>
 </html>

@@ -6,7 +6,7 @@
 }
  .plane {
 	 margin: 20px auto;
-	 max-width: 400px;
+	 max-width: 700px;
 }
 
 .eexit {
@@ -16,14 +16,27 @@
   color: black;
   border-color: black;
 }
+
+.door {
+  border-style: solid;
+  background-color: lightgreen;
+  font-size: 20px;
+  color: black;
+  border-color: black;
+}
  .exit {
 	 position: relative;
 	 height: 50px;
 }
 
- .fuselage {
-	 border-right: 5px solid #d8d8d8;
-	 border-left: 5px solid #d8d8d8;
+.borders {
+	padding: 10px;
+	margin-left: -50px;
+	margin-right: -50px;
+	border-top: 10px solid #8ee6e3;
+	border-right: 10px solid #8ee6e3;
+	border-left: 10px solid #8ee6e3;
+	border-bottom: 10px solid #8ee6e3;
 }
  ol {
 	 list-style: none;
@@ -50,14 +63,15 @@
 	 opacity: 0;
 }
  .seat input[type=checkbox]:checked + label {
-	 background: #bada55;
+	 background: #ff765e;
 	 -webkit-animation-name: rubberBand;
 	 animation-name: rubberBand;
 	 animation-duration: 300ms;
 	 animation-fill-mode: both;
+
 }
  .seat input[type=checkbox]:disabled + label {
-	 background: #ddd;
+	 background: black;
 	 text-indent: -9999px;
 	 overflow: hidden;
 }
@@ -73,16 +87,17 @@
 	 box-shadow: none;
 	 cursor: not-allowed;
 }
- .seat label {
+.seat label {
 	 display: block;
 	 position: relative;
 	 width: 100%;
 	 text-align: center;
-	 font-size: 14px;
+	 font-size: 20px;
 	 font-weight: bold;
+	 color: black;
 	 line-height: 1.5rem;
 	 padding: 4px 0;
-	 background: #f42536;
+	 background: green;
 	 border-radius: 5px;
 	 animation-duration: 300ms;
 	 animation-fill-mode: both;

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
     <head>
         <title>
-            Parking and Flight Bookings
+            M&M | Profile
         </title>
 
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body class="summaryB">
         <header>
-            <h1 class="logo"><a href="">Ecommerce Site Name</a></h1>
-            <h1 class="cart"><a href="./cart.php">Cart</a></h1>
+            <h1 class="logo"><a href="">miles&miles</a></h1>
+            <h1 class="cart">
+                <a href="./cart.php">
+                    <ion-icon name="basket"></ion-icon>
+                </a>
+            </h1>
             <nav>
                 <ul>
                     <li class="active"><a href="">Profile</a></li>
@@ -43,5 +47,6 @@
         
 
         <script src = "script.js"></script>
+        <script src = "https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     </body>
 </html>
