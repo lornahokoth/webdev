@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            Parking and Flight Bookings
+        </title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+      <body class="flightB">
+        <header>
+            <h1 class="logo"><a href="">Ecommerce Site Name</a></h1>
+            <h1 class="cart"><a href="./cart.php">Cart</a></h1>
+            <nav>
+                <ul>
+                    <li class=""><a href="./index.html">Home</a></li>
+                    <li class="active"><a href="flights.html">Flights</a></li>
+                    <li><a href="./parking.php">Parking</a></li>
+                    <a href="./both.php">Logout</a>
+                  </ul>
+            </nav>
+        </header>
+        <div class="flights">
+          <br>
+          <br>
+          <center>
+            <u><h2>FLIGHT INFORMATION:</h2></u>
+            <h3>One Way Trip | Non-stop</h3>
+            <img alt="ATL - AUH" src="../img/2.jpg">
+            <h3>Total Flight Time: <u>~16 Hours</u><h3>
+            <h3>DEPARTURE: Hartsfield-Jackson Atlanta International Airport, Atlanta, Georgia on <u>April 10, 2021 @ 02:30 EST</u></h3>
+            <h3>ARRIVAL: Abu Dhabi International Airport, Abu Dhabi - United Arab Emirates on <u>April 10, 2021 @ 18:30 EST</u></h3>
+            <h2 id="priceGenerator"></h2>
+            <br>
+            <b><a href="seating.html" class="chooseSeatButton">CHOOSE YOUR SEAT</a></b>
+          </center>
+          <br>
+          <br>
+          <script>
+            getNumber(600,750);
+
+            function getNumber(min, max) {
+              min = Math.ceil(min);
+              max = Math.floor(max);
+              number = Math.floor(Math.random() * (max - min + 1) + min);
+              document.getElementById("priceGenerator").innerHTML = "PRICE: $" + number;
+            }
+          </script>
+        </div>
+    </body>
+</html>
